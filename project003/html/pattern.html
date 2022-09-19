@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <!-- <h1>00</h1> -->
+    <p class="btn"></p>
+    <p class="txt">mouse wheel<span>☞</span></p>
+    <nav>
+        <ul>
+            <li><a href="#">01</a></li>
+            <li><a href="#">05</a></li>
+            <li><a href="#">10</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <article><a href="">어지럽혀진 방 빈 창가에 누워<br>
+                붉게 칠해진 볼을 식혔고</a></article>
+        <article><a href="">식은 적 없던 밤
+                나는 고갤 돌려서<br>
+                차가운 강을 찾아 잠에 들려해</a></article>
+        <article><a href="">가라앉아 버린 마음은 난 잡을 수 없고</a></article>
+        <article><a href="">잃어버린 나를 돌려줄<br>
+                누군가를 찾지</a></article>
+        <article><a href="">초점 없는 나의 두 눈을 찾아온 불빛은</a></article>
+        <article><a href="">손을 들어 나를 건져주네</a></article>
+        <article><a href="">검은 밤을 걷어주면<br>
+                새벽녘 끝에 쉴 수 있어</a></article>
+        <article><a href="">해가 늦으면 네 손에 몸을 숨기고</a></article>
+        <article><a href="">니가 저물면 난 다시 강에 잠겨지겠지</a></article>
+        <article><a href="">붓꽃이 피던 날 손을 가득 채우고<br>
+                뜨거운 날을 피해 숨었지</a></article>
+        <article><a href="">꽃잎이 시들걸 알고 있던 마음은<br>
+                보이지 않는 향기와 닮아가지</a></article>
+        <article><a href="">이어졌던 계절들도<br>
+                수없이 졌던 많은 날도</a></article>
+        <article><a href="">밤하늘에 너를 수놓았던 여름과<br>
+                나의 모든 시간들을 네가 비췄으면 해 음음</a></article>
+        <article><a href="">너의 작은 별이 뜨면<br>
+                우리 계절도 끝나겠지</a></article>
+        <article><a href="">네가 떠나고 남겨둔 사랑의 빛은<br>
+                색이 바래도 향기는 여전히 내게 머물러줘</a></article>
+        <!-- <article><a href=""></a></article>
+        <article><a href=""></a></article>
+        <article><a href=""></a></article>
+        <article><a href=""></a></article>
+        <article><a href=""></a></article> -->
+    </section>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Nanum+Brush+Script&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        body {
+            width: 100%;
+            height: 4000px;
+            /* 왜 4000? = 높이를 섹션의 width 값과 같이 해서 스크롤바 값을 받아서, 아티클의 위치를 이동시키기 위함 */
+            background-color: #ddd;
+            -ms-overflow-style: none;
+            /* 스크롤바 숨기기 */
+            font-family: 'East Sea Dokdo', cursive;
+        }
+
+        /* 스크롤바 숨기기 */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        h1 {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 5;
+        }
+
+        nav {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -280px;
+            margin-left: -97.5px;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 25px;
+        }
+
+        nav li a {
+            width: 40px;
+            display: block;
+            font-size: 28pt;
+            font-weight: bold;
+            transition: all 0.5s;
+        }
+
+        nav li a:hover {
+            color: rgb(75, 73, 107);
+            font-size: 32pt;
+        }
+
+        section {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            margin-top: -200px;
+            height: 500px;
+            width: 3800px;
+            /* 왜 4000에서 4600px으로 변경? 아티클이 on값을 받으면 커지도록 구현했을때, 가로 사이즈가 키워서 아티클의 일부가 떨어지는것을 방지 */
+            transition: all 0.3s;
+        }
+
+        article {
+            width: 220px;
+            height: 280px;
+            background-color: #fff;
+            float: left;
+            margin: 10px;
+            position: relative;
+            top: 50%;
+            margin-top: -200px;
+            transition: all 0.7s;
+            box-shadow: 3px;
+            cursor: default;
+        }
+
+        article a {
+            font-family: 'East Sea Dokdo', cursive;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 14pt;
+            transition: all 0.5s;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            color: rgb(75, 73, 107);
+            cursor: default;
+        }
+
+        article.on a {
+            height: 125px;
+            font-size: 24pt;
+        }
+
+        article.on {
+            width: 380px;
+            height: 500px;
+            margin-top: -250px;
+            box-shadow: 10px 10px 10px rgb(212, 203, 203);
+        }
+
+        article:nth-child(1) {
+            background-image: url(../img/photo/001.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        article:nth-child(2) {
+            background-image: url(../img/photo/003.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        article:nth-child(3) {
+            background-image: url(../img/photo/006.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        article:nth-child(4) {
+            background-image: url(../img/photo/010.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+
+        article:nth-child(5) {
+            background-image: url(../img/photo/004.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        article:nth-child(6) {
+            background-image: url(../img/photo/009.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        article:nth-child(7) {
+            background-image: url(../img/photo/002.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+
+        article:nth-child(8) {
+            background-image: url(../img/photo/013.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        article:nth-child(9) {
+            background-image: url(../img/photo/005.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        article:nth-child(10) {
+            background-image: url(../img/photo/008.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+
+        article:nth-child(11) {
+            background-image: url(../img/photo/007.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        article:nth-child(12) {
+            background-image: url(../img/photo/011.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        article:nth-child(13) {
+            background-image: url(../img/photo/012.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+
+        article:nth-child(14) {
+            background-image: url(../img/photo/014.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        article:nth-child(15) {
+            background-image: url(../img/photo/015.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .btn {
+            display: none;
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+            position: fixed;
+            left: 0;
+            top: 0;
+            cursor: pointer;
+        }
+
+        .txt {
+            font-size: 24pt;
+            position: fixed;
+            left: 30px;
+            bottom: 120px;
+            animation: txt_ani 1s alternate infinite;
+        }
+
+        .txt span {
+            position: absolute;
+            right: -30px;
+            top: 0;
+            transform: rotate(90deg);
+        }
+
+        @keyframes txt_ani {
+            0% {
+                bottom : 120px;
+                opacity: 0.3;
+            }
+            100% {
+                bottom : 100px;    
+            }
+        }
+
+    </style>
+
+    <script>
+        $(document).ready(function () {
+
+            let bt = 0;
+
+            // 아티클의 갯수를 찾아라
+            let numAc = $('article').size() /* size = 갯수 세는거 */
+            console.log(numAc);
+            // 아티클의 갯수와 개당 넓이(200px)를 곱해라 -> 총 아티클의 넓이
+            let widsec = 220 * numAc;
+            console.log(widsec);
+            // 아티클이 확대 되었을때의 크기를 더하라 -> 최종 섹션 크기
+            let widTotal = widsec + 600;
+            console.log(widTotal);
+            // 최종 섹션의 가로값을 바디의 높이값에 대입해라
+            $('body').height(widTotal);
+            // 바디의 높이값만큼 스크롤의 위치값을 바꾸어라
+            $('html, body').scrollTop(widsec);
+
+
+            setInterval(function () {
+                bt++;
+                if( bt == 1 ) {
+                    $('.btn').trigger('click');
+                }
+            }, 1000);
+
+
+            $(window).scroll(function () {
+                let sc = $(this).scrollTop();
+
+                // $('h1').text(sc);
+
+                // 1번 경우. 트랜지션과 함께 활용. 슬라이드에 활용하면 좋음
+                $('section').css({
+                    'left': -sc
+                });
+                // 2번 경우. 애니메이션 활용. 애니메이트는 클릭 인터랙션에 활용하면 좋음
+                // $('section').stop().animate({'left' : -sc}, 200);
+            });
+
+            $('article').mouseenter(function () {
+                $('article').removeClass('on');
+                $(this).addClass('on');
+            })
+
+            $('section').mouseleave(function () {
+                $('article').removeClass('on');
+            })
+
+            $('nav li').click(function (e) {
+
+                e.preventDefault();
+
+                let i = $(this).index();
+                let wd = 1000 * i;
+
+                // $('html, body').stop().animate({'scrollTop' : wd}, 600)
+                $('html, body').scrollTop(wd);
+
+            });
+
+            $('article a').click(function (e) {
+
+                e.preventDefault();
+
+            });
+
+
+            $('.btn').click(function () {
+
+                window.scrollTo(0, 0);
+
+            });
+        });
+    </script>
+</body>
+
+</html>

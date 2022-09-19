@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>너의기사</title>
+
+    <!-- 제이쿼리 선언문 -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+</head>
+
+<body>
+    <p class="txt">mouse wheel<span>☞</span></p>
+
+    <div class="cursor">
+    </div>
+
+    <div class="bg">
+        <p class="people"></p>
+        <div class="bg_dark"></div>
+        <div class="bg_dark002"></div>
+    </div>
+    <div class="bg_flower"></div>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Nanum+Brush+Script&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            -ms-overflow-style: none;
+            width: 100%;
+            height: 5000px;
+            overflow-x: hidden;
+            cursor: none;
+            font-family: 'East Sea Dokdo', cursive;
+        }
+
+        /* 스크롤바 숨기기 */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .cursor {
+            position: absolute;
+            width: 352px;
+            height: 576px;
+            background: url(img/people.png) center center;
+            background-attachment: fixed;
+            background-size: cover;
+            /* border: 5px solid #fff; */
+            /* border-radius: 50%; */
+            overflow: hidden;
+            z-index: 10;
+            left: 0;
+            bottom: 0;
+            transition: position 0, all 0.5s;
+            transform: scale(0.7) rotateY(0deg);
+            animation: cursor_ani 1.5s alternate infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes cursor_ani {
+            0% {
+                transform: scale(0.7) rotateY(0deg);
+            }
+
+            100% {
+                transform: scale(0.7) rotateY(180deg);
+            }
+        }
+
+        .bg {
+            width: 100%;
+            height: 5000px;
+            position: relative;
+            background: url(img/bg.jpg) center center;
+        }
+
+        .bg .people {}
+
+        .bg_flower {
+            background: url(img/flowers.png) center center;
+            width: 100%;
+            height: 1000px;
+            /* background-color: rgb(218, 70, 70); */
+            position: fixed;
+            left: 0;
+            top: 0;
+            opacity: 1;
+            z-index: 5;
+            margin-top: -80px;
+        }
+
+        .bg_dark {
+            background: url(img/dark002.png) center center;
+            width: 100%;
+            height: 1000px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 10;
+        }
+
+        .bg_dark002 {
+            background: url(img/dark001.png) center center;
+            width: 100%;
+            height: 1000px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 15;
+            opacity: 0.6;
+        }
+
+        .txt {
+            font-size: 30pt;
+            position: fixed;
+            left: 80px;
+            top: 60px;
+            animation: txt_ani 1s alternate infinite;
+            z-index: 30;
+            color: #fff;
+        }
+
+        .txt span {
+            position: absolute;
+            right: -30px;
+            top: 0;
+            transform: rotate(90deg);
+        }
+
+        @keyframes txt_ani {
+            0% {
+                bottom: 120px;
+                opacity: 0.3;
+            }
+
+            100% {
+                bottom: 100px;
+            }
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+
+            $(window).mousemove(function (e) {
+
+                // 화면에 표기하기
+                $('.cursor').css({
+                    'left': e.pageX - 100
+                });
+
+            });
+
+            $(window).scroll(function () {
+                let sc = $(this).scrollTop();
+                console.log(sc);
+                $('.cursor').css({
+                    'bottom': -sc
+                });
+            });
+
+            $('.bg_dark002').mouseenter(function () {
+                $('.cursor').css({
+                    'background': 'url(img/man.gif) center center',
+                    'animation': 'none',
+                    'width': 144 + 'px',
+                    'height': 540 + 'px',
+                    'z-index': 13
+                });
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>
