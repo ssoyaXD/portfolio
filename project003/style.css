@@ -1,0 +1,1254 @@
+@charset "UTF-8";
+
+/* 구글 폰트 연결 */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Gowun+Batang&family=Permanent+Marker&family=Square+Peg&display=swap');
+
+/*
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Gowun Batang', serif;
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Square Peg', cursive;
+ */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* height: 4800px; */
+    font-family: 'DM Serif Display', serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+header {
+    background-image: url(img/nav_img.png);
+    background-size: cover;
+    background-position: center right;
+    position: fixed;
+    width: 500px;
+    height: 100%;
+    /* background-color: indianred; */
+    left: -350px;
+    top: 0;
+    z-index: 3;
+    margin-left: -150px;
+    transform: rotate(15deg);
+    transition: all 0.8s;
+}
+
+header h1 {
+    position: absolute;
+    right: 10%;
+    top: 100px;
+    color: #fff;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 32pt;
+    /* background-color: aqua; */
+    transform: rotate(10deg);
+}
+
+header h1 a {
+    color: #4579AF;
+    transition: all 0.5s;
+}
+
+header h1 a:hover {
+    color: #1c1c1c;
+}
+
+nav {
+    position: absolute;
+    right: -5%;
+    bottom: 30px;
+}
+
+nav ul {
+    margin-bottom: 100px;
+}
+
+nav li {
+    padding: 10px;
+    width: 180px;
+    height: 50px;
+    color: #4579AF;
+    cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 18pt;
+    background-color: #F3EEDB;
+    margin-top: 20px;
+    text-align: right;
+    transition: all 0.5s;
+    box-sizing: border-box;
+}
+
+nav li:hover {
+    /* text-decoration: underline;
+    font-weight: bold; */
+    opacity: 0.6;
+}
+
+nav li.on {
+    text-decoration: underline;
+    font-weight: bold;
+    background-color: #4579AF;
+    color: #FFFDFB;
+    font-size: 22pt;
+}
+
+section {
+    position: fixed;
+    display: flex;
+    width: 400%;
+    height: 100%;
+    /*아티틀갯수*높이값 임시설정*/
+    background-color: beige;
+    /* overflow: hidden; */
+    left: 0;
+    top: 0;
+    transition: all 0.8s;
+}
+
+article {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    position: relative;
+}
+
+article:nth-child(1) {
+    overflow: hidden;
+    background-color: #fff;
+}
+
+article:nth-child(2) {
+    background-color: rgb(218, 213, 208);
+    position: relative;
+    overflow: hidden;
+}
+
+article:nth-child(3) {
+    overflow: hidden;
+    /* background-color: rgb(59, 192, 110); */
+    background-image: url(img/movie_bg.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+article:nth-child(4) {
+    overflow: hidden;
+    background-color: rgb(100, 83, 196);
+}
+
+.side .view {
+    opacity: 1;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    z-index: 15;
+    margin-top: -50px;
+    /* background-color: blue; */
+    transition: all 0.5s;
+}
+
+.side .view.on {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    right: 50px;
+    top: 50%;
+    margin-top: -25px;
+}
+
+.side .view:hover {
+    right: 100px;
+}
+
+.side .view a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.side .view a i {
+    width: 100%;
+    height: 100%;
+    font-size: 62pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+
+/* 프로필 */
+.profile_con {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.profile_con .profile_bg {
+    background: transparent linear-gradient(0deg, #E5D4C4 0%, #0881A3 100%) 0% 0% no-repeat padding-box;
+    width: 602px;
+    height: 700px;
+    margin-left: 50%;
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+    z-index: 1;
+    animation: profile_bg_ani 3s infinite alternate;
+    transition: all 0.5s;
+}
+
+@keyframes profile_bg_ani {
+    0% {}
+
+    50% {}
+
+    100% {}
+}
+
+.profile_con .profile_img {
+    background-image: url(img/profile_img.png);
+    background-size: cover;
+    background-position: center center;
+    width: 651px;
+    height: 907px;
+    position: absolute;
+    right: 0;
+    top: -200px;
+}
+
+.profile_con .poclanos {
+    background-image: url(img/profile_sub_img.png);
+    background-size: cover;
+    background-position: center center;
+    width: 210px;
+    height: 210px;
+    margin-left: 80%;
+    position: absolute;
+    right: -10%;
+    top: -100px;
+    animation: poclanos_ani 10s infinite;
+}
+
+@keyframes poclanos_ani {
+    0% {}
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.profile_con .txt_bg {
+    background-color: #F3EEDB;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    width: 750px;
+    height: 650px;
+    text-align: right;
+    font-size: 32pt;
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.profile_con h3 {
+    width: 900px;
+    height: 87px;
+    font-size: 48pt;
+    margin-bottom: 10px;
+    color: #11457A;
+    font-family: 'Permanent Marker', cursive;
+    text-align: right;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 5;
+}
+
+.profile_con p {
+    font-family: 'Permanent Marker', cursive;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 900px;
+    height: 107px;
+    text-align: right;
+    font-size: 32pt;
+    color: #B1A194;
+}
+
+.profile_con .profile_txt p:nth-child(1) {
+    top: 50%;
+}
+
+.profile_con .profile_txt p:nth-child(2) {
+    margin-top: 50px;
+    top: 57%;
+}
+
+.profile_con .profile_txt p:nth-child(3) {
+    margin-top: 50px;
+    top: 64%;
+}
+
+.profile_con .profile_txt p:nth-child(4) {
+    margin-top: 50px;
+    top: 71%;
+}
+
+
+.profile_con .profile_txt p:nth-child(5) {
+    margin-top: 50px;
+    top: 78%;
+}
+
+.mouse_txt {
+    font-size: 26pt;
+    position: fixed;
+    left: 100px;
+    top : 40px;
+    animation: txt_ani 1s alternate infinite;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.mouse_txt span {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    transform: rotate(90deg);
+}
+
+@keyframes txt_ani {
+    0% {
+        top : 40px;
+        opacity: 0.3;
+    }
+    100% {
+        top : 60px;    
+    }
+}
+
+/* 앨범 */
+article:nth-child(2) .title h2 {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    margin-left: -50%;
+    z-index: 5;
+    color: #fff;
+}
+
+article:nth-child(2) .title p {
+    width: 110px;
+    height: 9px;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -55px;
+    z-index: 5;
+}
+
+article:nth-child(2) .con p:nth-child(1) {
+    /* display: none; */
+}
+
+article:nth-child(2) .con .btn {
+    display: none;
+    background-color: #11457A;
+    width: 100px;
+    height: 150px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 150px;
+    z-index: 50;
+}
+
+article:nth-child(2) .con.on p:nth-child(1) {
+    /* 임시 */
+    /* display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: aquamarine;
+    position: absolute;
+    z-index: 10;
+    right: 50px;
+    bottom: 60px; */
+}
+
+.con iframe {
+    width: 0;
+    height: 0;
+    transition: all 0.8s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    z-index: 3;
+}
+
+.con.on iframe {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+}
+
+article .phone {
+    background-image: url(img/phone_img.png);
+    background-size: cover;
+    width: 410px;
+    height: 750px;
+    /* background-color: brown; */
+    position: absolute;
+    right: 30px;
+    bottom: 50%;
+    z-index: 10;
+    transition: all 0.5s;
+    margin-bottom: -345px;
+    /* 왜 반절인 375가 아닌가? = 푸터의 반절만큼 뺌(-30px) */
+}
+
+.phone .notice {
+    position: absolute;
+    bottom: -30px;
+    left: 10px;
+    color: #fff;
+    font-family: 'Gowun Batang', serif;
+    z-index: 50;
+    font-size: 11pt;
+    text-shadow: -1px 0px #11457A, 0px 1px #11457A, 1px 0px #11457A, 0px -1px #11457A;
+}
+
+article .phone .vw_btn {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    left: 50%;
+    bottom: 35px;
+    margin-left: -27.5px;
+    cursor: pointer;
+    transition: all 0.5s;
+    animation: vw_btn_ani 1s alternate infinite;
+}
+
+@keyframes vw_btn_ani {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+        background-color: #4579AF;
+    }
+}
+
+article .phone .vw_btn:hover {
+    background-color: #4579AF;
+    animation-play-state:paused;
+    opacity: 1;
+}
+
+.phone .ph_bg {
+    /* background-color: brown; */
+    background : transparent linear-gradient(0deg, #E5D4C4 0%, #0881A3 100%) 0% 0% no-repeat padding-box;
+    width: 330px;
+    height: 559px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 93.5px;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.phone .ph_bg .album_thum {
+    background-color: #0881A3;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    top: 180px;
+    margin-left: -125px;
+    border-radius: 25px;
+    overflow: hidden;
+    /* filter: opacity(0.5) drop-shadow(0 0 0 #ff3c00); */
+}
+
+.phone .ph_bg .album_thum p {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.album_thum p.on {
+    z-index: 10;
+}
+
+.album_thum p audio {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.phone .play {
+    display: none;
+}
+
+.phone .stop {
+    display: none;
+}
+
+.phone .ph_bg .album_thum p:nth-child(1) {
+    background-image: url(img/album_img_011.jpg);
+}
+
+.phone .ph_bg .album_thum p:nth-child(2) {
+    background-image: url(img/album_img_002.jpg);
+}
+
+.phone .ph_bg .album_thum p:nth-child(3) {
+    background-image: url(img/album_img_003.jpg);
+}
+
+.phone .ph_bg .album_thum p:nth-child(4) {
+    background-image: url(img/album_img_004.jpg);
+}
+
+.phone .ph_bg .album_thum p:nth-child(5) {
+    background-image: url(img/album_img_008.jpg);
+}
+
+.phone .ph_bg .album_thum p:nth-child(6) {
+    background-image: url(img/album_img_007.jpg);
+}
+
+.phone .ph_bg .album_thum p:nth-child(7) {
+    background-image: url(img/album_img_001.jpg);
+}
+
+.phone .ph_bg .album_thum p:nth-child(8) {
+    background-image: url(img/album_img_005.jpg);
+}
+
+.phone .ph_bg .album_thum p:nth-child(9) {
+    background-image: url(img/album_img_006.jpg);
+}
+
+.phone .ph_bg .album_thum p:nth-child(10) {
+    background-image: url(img/album_img_007.jpg);
+}
+
+.phone .ph_bg .album_thum p:nth-child(11) {
+    background-image: url(img/album_img_009.jpg);
+}
+
+.phone .ph_bg .album_thum p:nth-child(12) {
+    background-image: url(img/album_img_006.jpg);
+}
+
+
+.phone .ph_bg .bt_img {
+    background-image: url(img/bt_img.png);
+    background-size: 96%;
+    background-repeat: no-repeat;
+    width: 335px;
+    height: 21px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+.ph_txt {
+    padding-top: 40px;
+    text-align: center;
+    font-family: 'Gowun Batang', serif;
+}
+
+.ph_txt p {
+    margin-bottom: 5px;
+}
+
+.ph_txt .music_name {
+    display: none;
+    opacity: 0;
+    font-size: 14pt;
+}
+
+.ph_txt .music_name.on {
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    font-size: 14pt;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.ph_txt p:nth-child(1) {
+    font-size: 42pt;
+    font-family: 'DM Serif Display', serif;
+}
+
+.ph_txt p:nth-child(2) {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.ph_txt p:nth-child(3) {
+    font-size: 10pt;
+}
+
+.title {
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: -20%;
+    margin-left: -100px;
+    /* background-color: #11457A; */
+    transform: rotate(0);
+    transition: all 0.8s;
+    z-index: 15;
+}
+
+.title.on {
+    animation: title_ani 5s alternate;
+}
+
+@keyframes title_ani {
+    0% {
+        top: 0;
+        transform: rotate(-30deg);
+    }
+
+    20% {
+        top: 0;
+        transform: rotate(30deg);
+        opacity: 0;
+    }
+
+    40% {
+        top: 0;
+    }
+
+    60% {
+        top: 0;
+    }
+
+    80% {
+        top: 0;
+    }
+
+    100% {}
+}
+
+article .title h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 54px;
+    color: #11457A;
+}
+
+article .title p {
+    width: 110px;
+    height: 9px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(90deg);
+    background: transparent linear-gradient(90deg, #E5D4C4 0%, #0881A3 100%) 0% 0% no-repeat padding-box;
+}
+
+/* 핸드폰 안 버튼 */
+.ph_btn {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    display: flex;
+    width: 300px;
+    height: 60px;
+    margin-left: -150px;
+}
+
+.ph_btn p {
+    width: 100px;
+    height: 60px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 560px;
+    margin-left: 50px;
+}
+
+.ph_btn p:hover a i {
+    color: #1c1c1c;
+}
+
+.ph_btn p:nth-child(1) {
+    margin-left: 0;
+}
+
+.ph_btn p a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ph_btn p a i {
+    font-size: 58pt;
+    color: #4579AF;
+    transition: all 0.5s;
+}
+
+.ph_btn p:nth-child(3) {
+    display: none;
+}
+
+.ph_btn p:nth-child(3) a i {
+    font-size: 46pt;
+}
+
+.ph_btn p.on {
+    display: flex;
+}
+
+/* josee */
+.con02_wrap {
+
+}
+
+.mText {
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 1.5vw;
+    line-height: 1.6;
+    white-space: nowrap;
+    /* background-color: firebrick; */
+    overflow: hidden;
+    z-index:3;
+}
+
+.mText.on {
+    transform: translate(-50%, -50%) scale(1.0);
+}
+
+.mText p {
+    width: 400px;
+    height: 50px;
+    /* transform: scale(0); */
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    /* background-color: aquamarine; */
+    margin-left: -200px;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gowun Batang', serif;
+    color: #fff;
+}
+
+.mText.on p.on {
+    font-size: 2.0vw;
+    top: 0;
+}
+
+
+/* 무비 */
+article:nth-child(3) .title h2 {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    margin-left: -50%;
+    z-index: 5;
+    color: #fff;
+}
+
+.movie {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -30px; /* 푸터의 반 */
+}
+
+.rain:nth-child(1) {
+    background-image: url(img/rain.png);
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    /* background-color: #0881A3; */
+    position: absolute;
+    z-index: 1;
+    animation: movie_bg_ani_001 8s infinite;
+    left: 0;
+    top: 100%;
+    opacity: 1;
+}
+
+.rain:nth-child(2) {
+    background-image: url(img/rain_02.png);
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    /* background-color: #0881A3; */
+    position: absolute;
+    z-index: 1;
+    animation: movie_bg_ani_002 5.5s infinite;
+    left: 0;
+    top: 100%;
+    opacity: 1;
+}
+
+.rain:nth-child(3) {
+    background-image: url(img/rain_03.png);
+    background-size: 70%;
+    width: 100%;
+    height: 100%;
+    /* background-color: #0881A3; */
+    position: absolute;
+    z-index: 1;
+    animation: movie_bg_ani_002 4s infinite;
+    left: -10%;
+    top: 100%;
+    opacity: 1;
+}
+
+
+@keyframes movie_bg_ani_001 {
+    0% {
+        left: 10%;
+        top: -30%;
+        opacity: 1;
+    }
+    
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes movie_bg_ani_002 {
+    0% {
+        left: 10%;
+        top: -50%;
+        opacity: 1;
+    }
+    
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes movie_bg_ani_002 {
+    0% {
+        left: 10%;
+        top: -50%;
+        opacity: 1;
+    }
+    
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+
+
+.movie .movie_view {
+    width: 57.5%;
+    height: 740px;
+    background-color: #11457A;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.movie .movie_view p {
+    position: absolute;
+}
+
+.movie .movie_view p.on span {
+    font-family: 'Gowun Batang', serif;
+    opacity: 1;
+    width: 1000px;
+    height: 60px;
+    /* background-color: #f39a52; */
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    font-size: 12pt;
+    z-index: 3;
+    color: #fff;
+}
+
+.movie .movie_view p span {
+    opacity: 0;
+    width: 0;
+    position: absolute;
+    left: 10px;
+    top: -50px;
+    transition: all 0.5s;
+}
+
+.movie .movie_list {
+    width: 15%;
+    height: 740px;
+    background-color: #11457A;
+}
+
+.movie .movie_list ul {}
+.movie .movie_list ul li {
+    width: 100%;
+    height: 65px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.movie .movie_list ul li:hover a {
+    color: #f39a52;
+}
+
+.movie .movie_list ul li.on a {
+    background-color: #4579AF;
+    color: #1c1c1c;
+}
+
+.movie .movie_list ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    background-color: #F3EEDB;
+    color: #4579AF;
+    font-size: 18pt;
+    transition: all 0.5s;
+}
+
+.movie .movie_list ul li:nth-child(9) a {
+    font-family: 'Gowun Batang', serif;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.movie .movie_list ul li:nth-child(10) a {
+    font-family: 'Gowun Batang', serif;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.movie .play {
+    display: none;
+}
+
+.movie .stop {
+    display: none;
+}
+
+.movie p video {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.movie p.on video {
+    width: 100%;
+    height: 740px;
+    display: flex;
+}
+
+/* 콘서트 */
+article:nth-child(4) .title h2 {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    margin-left: -50%;
+    z-index: 5;
+    color: #fff;
+}
+
+.concert_slide {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+    height: 400px;
+    /* background-color: aquamarine; */
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+    z-index: 10;
+    transition: all 0.5s;
+    /* background-color: #11457A; */
+}
+
+.concert_slide .box {
+    display: flex;
+}
+
+.concert_slide ul {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    margin-top: -150px;
+    /* background-color: #f39a52; */
+}
+
+.concert_slide ul li {
+    width: 200px;
+    height: 400px;
+    padding: 0px 10px;
+    /* border: 2px solid #000; */
+    /* box-sizing: border-box; */
+    /* background-color: palegoldenrod; */
+    filter: blur(3px);
+    transition: all 0.5s;
+}
+
+.concert_slide ul li img {
+    width: 200px;
+    height: 300px;
+    vertical-align: bottom;
+}
+
+.concert_slide ul:nth-child(1) {
+    left: 0;
+    animation: ani1 30s linear infinite;
+}
+
+.concert_slide ul:nth-child(2) {
+    left: 100%;
+    animation: ani2 30s linear infinite;
+}
+
+.concert_slide:hover ul:nth-child(1) {
+    animation-play-state: paused;
+}
+
+.concert_slide:hover ul:nth-child(2) {
+    animation-play-state: paused;
+}
+
+/* .concert_slide li:hover {
+    color: #fc0093;
+    transform: scale(0.8);
+} */
+
+@keyframes ani1 {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    50.00001% {
+        left: 200%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes ani2 {
+    0% {
+        left: 200%;
+    }
+
+    50% {
+        left: 0;
+    }
+
+    100% {
+        left: -200%;
+    }
+}
+
+/* .concert_slide ul li:hover {
+    transform: scale(1.0);
+} */
+
+.concert_slide li.on {
+    transform: scale(1.2);
+    filter: blur(0px);
+}
+
+.concert_slide button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: none;
+}
+
+/* 콘서트 커서 */
+.mouse {
+
+}
+
+.mouse_inner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(img/con_bg.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: blur(4px);
+}
+
+.mouse_inner::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(00, 00, 00, 0.8);
+    z-index: 5;
+}
+
+article:nth-child(4) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+
+.cursor {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: url(img/con_bg.jpeg) center center;
+    background-attachment: fixed;
+    background-size: cover;
+    border: 5px solid #fff;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.cursor.on {
+    z-index: 20;
+    background: none;
+    /* border: 5px solid #0881A3; */
+}
+
+.concert_info {
+    position: relative;
+}
+
+.concert_info ul li {
+    width: 800px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    font-size: 16pt;
+    font-family: 'Gowun Batang', serif;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.concert_info ul li p {
+    display: block;
+    margin-top: 5px;
+}
+
+.concert_info ul li span { 
+    margin-right: 10px;
+    font-size: 14pt;
+    font-weight: bold;
+    font-family: 'Gowun Batang', serif;
+}
+
+.concert_info ul li b {
+    display: flex;
+    font-weight: normal;
+}
+
+.concert_info ul li.on {
+    display: block;
+}
+
+/* 푸터 */
+footer {
+    position: fixed;
+    background-color: #1c1c1c;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    color: #fff;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer p {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: 'Gowun Batang', serif;
+    width: 1680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer em {
+    font-size: 14px;
+    font-style: normal;
+}

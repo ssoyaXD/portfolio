@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daymons Year_intro</title>
+
+    <!-- 폰트어썸 CDN -->
+    <script src="https://kit.fontawesome.com/065a7003c3.js" crossorigin="anonymous"></script>
+    <!-- 제이쿼리 선언문 -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+
+    <!-- 아이콘/파비콘 설정-->
+    <!-- 웹 & 안드 -->
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" sizes="16x16">
+    <!-- 아이폰 -->
+    <link rel="apple-touch-icon" href="img/icon.png" type="image/x-icon" sizes="16x16">
+    <!-- 웹 앱 전체 화면 설정 -->
+    <!-- 안드 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 아이폰 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <style>
+        /* 구글 폰트 연결 */
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Gowun+Batang&family=Permanent+Marker&family=Square+Peg&display=swap');
+
+        /*
+            font-family: 'DM Serif Display', serif;
+            font-family: 'Gowun Batang', serif;
+            font-family: 'Permanent Marker', cursive;
+            font-family: 'Square Peg', cursive;
+        */
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            color: #1c1c1c;
+            text-decoration: none;
+        }
+
+        body {
+            background-image: url(img/main_bg.png);
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .wrap {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .img {
+            position: relative;
+            left: 50%;
+            bottom: -5%;
+            width: 1500px;
+            height: 100%;
+            margin-left: -750px;
+            /* background-color: brown; */
+            transform: scale(0.7);
+        }
+
+        .img p:nth-child(1) {
+            background-image: url(img/curcle.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0;
+            bottom: 10%;
+            width: 1067px;
+            height: 1067px;
+            z-index: 0;
+            margin-bottom: -10%;
+            transform: scale(1.2);
+        }
+
+        .img p:nth-child(2) {
+            background-image: url(img/main_img_001.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 5%;
+            bottom: 0;
+            width: 1540px;
+            height: 1321px;
+            z-index: 1;
+            margin-bottom: -12%;
+        }
+
+        .img p:nth-child(3) {
+            background-image: url(img/main_img_002.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: -5%;
+            bottom: 0;
+            width: 597px;
+            height: 472px;
+            margin-bottom: -5%;
+        }
+
+        .img p:nth-child(4) {
+            background-image: url(img/main_img_003.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 80%;
+            bottom: 15%;
+            width: 223px;
+            height: 292px;
+            margin-bottom: -8%;
+        }
+
+        .txt {
+            /* left: 50%;
+            bottom: 0;
+            width: 1600px;
+            height: 100%;
+            margin-left: -800px;
+            background-color: rgb(165, 42, 118); */
+        }
+
+        .txt p:nth-child(1) {
+            font-family: 'Permanent Marker', cursive;
+            position: absolute;
+            right: 15%;
+            top: -20%;
+            font-size: 88pt;
+            color: #4579AF;
+            transform: rotate(90deg);
+            margin-top: 30%;
+            margin-right: -15%;
+            /* animation: txt_ani 2s alternate infinite; */
+            opacity: 1;
+            z-index: 10;
+        }
+
+        @keyframes txt_ani {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.6;
+            }
+        }
+
+        .txt p:nth-child(2) {
+            width: 300px;
+            font-family: 'Square Peg', cursive;
+            position: absolute;
+            left: 15%;
+            top: 15%;
+            font-size: 18pt;
+            color: #B1A194;
+            margin-top: 30%;
+            margin-right: -15%;
+            opacity: 0.5;
+            text-align: right;
+        }
+
+        .txt p:nth-child(3) a {
+            font-family: 'DM Serif Display', serif;
+            position: absolute;
+            left: 28%;
+            top: 8%;
+            font-size: 64pt;
+            margin-top: 30%;
+            margin-right: -15%;
+            z-index: 10;
+            font-weight: bold;
+            transition: all 0.3s;
+            color: #fff;
+            text-shadow: 3px 3px 3px #5685cc;
+        }
+
+        .txt p:nth-child(3) a i {
+            position: absolute;
+            left: 220px;
+            top: 40px;
+            font-size: 38pt;
+            margin-left: 20px;
+            animation: ani_001 1s alternate infinite;
+            transition: all 0.3s;
+        }
+
+        .txt p:nth-child(3) a:hover span {
+            width: 350px;
+        }
+
+        @keyframes ani_001 {
+            0% {
+                left: 220px;
+                opacity: 0;
+            }
+
+            100% {
+                left: 280px;
+            }
+        }
+
+        .txt p span:nth-child(1) {
+            display: flex;
+            width: 100px;
+            height: 10px;
+            background-image: url(img/line_001.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: -14%;
+            top: 50%;
+            z-index: 0;
+            animation: none;
+        }
+
+        .txt p span:nth-child(2) {
+            display: flex;
+            width: 100px;
+            height: 10px;
+            background-image: url(img/line_002.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 102%;
+            top: 50%;
+            z-index: 0;
+            animation: none;
+        }
+
+        .txt p:nth-child(3) span {
+            background-color: #1c1c1c;
+            display: flex;
+            width: 0px;
+            height: 10px;
+            position: absolute;
+            left: 0%;
+            top: 85%;
+            z-index: 0;
+            animation: none;
+            transition: all 0.8s;
+        }
+
+        .wave {
+            opacity: .4;
+            position: relative;
+            width: 120%;
+            height: 130%;
+            margin-left: -250px;
+            margin-top: -600px;
+            overflow: hidden;
+            border-radius: 50%;
+            transform-origin: 50% 48%;
+            /* background: rgb(240, 236, 229); */
+
+        }
+
+        .wave p:nth-child(1) {
+            position: absolute;
+            left: -20%;
+            top: 20%;
+            background: rgb(197, 217, 228);
+            width: 145%;
+            height: 300%;
+            border-radius: 43%;
+            transform-origin: 50% 48%;
+            animation: drift 30s infinite linear;
+        }
+
+        .wave p:nth-child(2) {
+            position: absolute;
+            left: -25%;
+            top: 22%;
+            background: #88acd3;
+            width: 140%;
+            height: 300%;
+            border-radius: 43%;
+            transform-origin: 50% 50%;
+            animation: drift 40s infinite linear;
+            transform: rotate(10deg);
+        }
+
+        @keyframes drift {
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="wrap">
+        <div class="box">
+            <div class="txt">
+                <p><span></span> Daymons Year <span></span></p>
+                <p>Find a quiet place scream I won't be able to go out anyway. I can't stand the sadness of a short
+                    period of time, Feel distracted. I can't read anything. I can't hear anything.
+                    Even if someone told me that i love you. Why al I suspicious? My empty sky, fill up the night sky.
+                    Just filling me up is an empty cloud. Blow the wind.</p>
+                <p><a href="main.html">Join us<span></span><i class="fa fa-angle-double-right"
+                            aria-hidden="true"></i></a></p>
+            </div>
+            <div class="img">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="wave">
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $('section').mousemove(function (e) {
+
+                //화면중앙 기준 마우스의 좌표값을 찾아내기
+                var posX = e.pageX - window.innerWidth / 2;
+                var posY = e.pageY - window.innerHeight / 2;
+
+                // 마우스좌표값에 반응해서 이미지가 움직여라.
+
+                //첫 번째 박스의 이미지 위치값을 마우스 커서의 위치값과 연동
+                $(".img p:nth-child(2)").css({
+                    'left': (5 + (posX / 800)) + '%',
+                    'bottom': (0 + (posY / 0)) + '%'
+                });
+
+                $(".img p:nth-child(3)").css({
+                    'left': (-5 - (posX / 120)) + '%',
+                    'bottom': (0 - (posY / 120)) + '%'
+                });
+
+                $(".img p:nth-child(4)").css({
+                    'left': (80 + (posX / 120)) + '%',
+                    'bottom': (15 + (posY / 120)) + '%'
+                });
+
+            });
+
+        })
+    </script>
+
+</body>
+
+</html>

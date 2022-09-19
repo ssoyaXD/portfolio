@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daymons Year</title>
+
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 폰트어썸 CDN -->
+    <script src="https://kit.fontawesome.com/065a7003c3.js" crossorigin="anonymous"></script>
+    <!-- 제이쿼리 선언문 -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- 외부 js 연결 -->
+    <script src="javascript.js"></script>
+
+    <!-- 아이콘/파비콘 설정-->
+    <!-- 웹 & 안드 -->
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" sizes="16x16">
+    <!-- 아이폰 -->
+    <link rel="apple-touch-icon" href="img/icon.png" type="image/x-icon" sizes="16x16">
+    <!-- 웹 앱 전체 화면 설정 -->
+    <!-- 안드 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 아이폰 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Day month Year</a></h1>
+        <nav>
+            <ul>
+                <li class="on">Profile</li>
+                <li>Album</li>
+                <li>Movie</li>
+                <li>Concert</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article class="on">
+            <div class="title on">
+                <p></p>
+                <h2>PROFILE</h2>
+            </div>
+            <p class="mouse_txt">mouse wheel<span>☞</span></p>
+            <div class="profile_con">
+                <div class="profile_bg">
+                    <p class="profile_img"></p>
+                    <p class="poclanos"></p>
+                </div>
+                <h3>Daymons Year</h3>
+                <div class="profile_txt">
+                    <p class="txt_bg"></p>
+                    <p>Age : 27(1994)</p>
+                    <p>Birth : 11.08</p>
+                    <p>Genre : R&B, Rock, Ballad</p>
+                    <p>Debut : 2017.05.25</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="side">
+                <p class="view on"><a href="#"><i class="fa fa-hand-o-left" aria-hidden="true"></i></a></p>
+                <div class="phone">
+                    <p class="notice">※ 화면 넘김을 원할 시, 스마트폰 위에서 wheel을 사용해주세요.</p>
+                    <button class="play">PLAY</button>
+                    <button class="stop">STOP</button>
+                    <button class="vw_btn"></button>
+                    <div class="ph_bg">
+                        <p class="bt_img"></p>
+                        <div class="ph_txt">
+                            <p class="time">00 : 00</p>
+                            <p class="music_name on">Busan</p>
+                            <p class="music_name">josee!</p>
+                            <p class="music_name">Pattern</p>
+                            <p class="music_name">Rainbow</p>
+                            <p class="music_name">nite</p>
+                            <p class="music_name">August</p>
+                            <p class="music_name">재워</p>
+                            <p class="music_name">yours</p>
+                            <!-- <p class="music_name">내가 사랑했던</p> -->
+                            <p class="music_name">너의 기사</p>
+                            <!-- <p class="music_name">Cherry</p> -->
+                            <p class="music_name">salty</p>
+                            <p>데이먼스 이어(daymons year)</p>
+                        </div>
+                        <div class="album_thum">
+                            <p class="on">
+                                <audio style="width: 100%;" preload loop="5" onloadstart="this.volume=0.2" controls>
+                                    <source src="img/audio/Busan.mp3" type="audio/mp4">
+                                </audio>
+                            </p>
+                            <p>
+                                <audio style="width: 100%;" preload loop="5" onloadstart="this.volume=0.2" controls>
+                                    <source src="img/audio/josee!.mp3" type="audio/mp4">
+                                </audio>
+                            </p>
+                            <p>
+                                <audio style="width: 100%;" preload loop="5" onloadstart="this.volume=0.2" controls>
+                                    <source src="img/audio/Pattern.mp3" type="audio/mp4">
+                                </audio>
+                            </p>
+                            <p>
+                                <audio style="width: 100%;" preload loop="5" onloadstart="this.volume=0.2" controls>
+                                    <source src="img/audio/Rainbow.mp3" type="audio/mp4">
+                                </audio>
+                            </p>
+                            <p>
+                                <audio style="width: 100%;" preload loop="5" onloadstart="this.volume=0.2" controls>
+                                    <source src="img/audio/nite.mp3" type="audio/mp4">
+                                </audio>
+                            </p>
+                            <p>
+                                <audio style="width: 100%;" preload loop="5" onloadstart="this.volume=0.2" controls>
+                                    <source src="img/audio/August.mp3" type="audio/mp4">
+                                </audio>
+                            </p>
+                            <p>
+                                <audio style="width: 100%;" preload loop="5" onloadstart="this.volume=0.2" controls>
+                                    <source src="img/audio/재워.mp3" type="audio/mp4">
+                                </audio>
+                            </p>
+                            <p>
+                                <audio style="width: 100%;" preload loop="5" onloadstart="this.volume=0.2" controls>
+                                    <source src="img/audio/yours.mp3" type="audio/mp4">
+                                </audio>
+                            </p>
+                            <!-- <p>
+                                <audio style="width: 100%;" preload loop="5" onloadstart="this.volume=0.2" controls>
+                                    <source src="img/audio/내가 사랑했던.mp3" type="audio/mp4">
+                                </audio>
+                            </p> -->
+                            <p>
+                                <audio style="width: 100%;" preload loop="5" onloadstart="this.volume=0.2" controls>
+                                    <source src="img/audio/Your Knight.mp3" type="audio/mp4">
+                                </audio>
+                            </p>
+                            <!-- <p>
+                                <audio style="width: 100%;" preload loop="5" onloadstart="this.volume=0.2" controls>
+                                    <source src="img/audio/Cherry.mp3" type="audio/mp4">
+                                </audio>
+                            </p> -->
+                            <p>
+                                <audio style="width: 100%;" preload loop="5" onloadstart="this.volume=0.2" controls>
+                                    <source src="img/audio/salty.mp3" type="audio/mp4">
+                                </audio>
+                            </p>
+                        </div>
+                        <div class="ph_movie">
+                        </div>
+                    </div>
+                    <div class="ph_btn">
+                        <p><a href="#"><i class="fa fa-caret-left" aria-hidden="true"></i></a></p>
+                        <p class="on"><a href="#"><i class="fa fa-pause" aria-hidden="true"></i></a></p>
+                        <p><a href="#"><i class="fa fa-music" aria-hidden="true"></i></a></p>
+                        <p><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="title">
+                <p></p>
+                <h2>ALBUM</h2>
+            </div>
+            <div class="con_set">
+                <div class="con on">
+                    <iframe src="html/busan/index.html" frameborder="0"></iframe>
+                </div>
+                <div class="con">
+                    <iframe src="html/josee!/index.html" frameborder="0"></iframe>
+                    <div class="con02_wrap">
+                        <div class="mText">
+                            <p class="on">너는 달을 볼 때 눈이 커졌고</p>
+                            <p>나는 너의 눈에 비친 것을 보네</p>
+                            <p>네가 사랑하는 것이 나와 같아</p>
+                            <p>나는 너를 보네</p>
+                            <p>꽃이 피어가는 줄도 모른 채</p>
+                            <p>고운 너의 그림자를 안고서</p>
+                            <p>마지막처럼 입맞춤을 추곤</p>
+                            <p>우리 늙지 말자</p>
+                            <p>다 가져가 줘요 아쉬움 없도록</p>
+                            <p>나의 사랑은 그리 길지 않으니</p>
+                            <p>이 순간, 나의 모든걸 줄게</p>
+                            <p>남은 나의 시간도</p>
+                            <p>아, 아</p>
+                            <p>다시 너를 안게 된다면</p>
+                            <p>그땐 나의 빛을 밝혀서</p>
+                            <p>너의 모든 것들을 덮어줄게</p>
+                            <p>잘자, 나의 우는 사랑</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="con">
+                    <p class="btn">asda</p>
+                    <iframe src="html/pattern.html" frameborder="0" name="patt" id="patt"></iframe>
+                </div>
+                <div class="con">
+                    <iframe src="html/rainbow/index.html" frameborder="0"></iframe>
+                </div>
+                <div class="con">
+                    <iframe src="html/nite/index.html" frameborder="0"></iframe>
+                </div>
+                <div class="con">
+                    <iframe src="html/august/index.html" frameborder="0"></iframe>
+                </div>
+                <div class="con">
+                    <iframe src="html/재워/index.html" frameborder="0"></iframe>
+                </div>
+                <div class="con">
+                    <iframe src="html/yours/index.html" frameborder="0"></iframe>
+                </div>
+                <!-- <div class="con">
+                    <p>만드는중..</p>
+                </div> -->
+                <div class="con">
+                    <iframe src="html/너의기사/index.html" frameborder="0"></iframe>
+                </div>
+                <!-- <div class="con">
+                    <p>만드는중..</p>
+                </div> -->
+                <div class="con">
+                    <iframe src="html/salty/index.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="title">
+                <p></p>
+                <h2>MOVIE</h2>
+            </div>
+            <div class="rain"></div>
+            <div class="rain"></div>
+            <div class="rain"></div>
+            <div class="movie">
+                <button class="play">PLAY</button>
+                <button class="stop">STOP</button>
+                <div class="movie_view">
+                    <p class="on">
+                        <span>출처 - https://www.youtube.com/watch?v=YPd7VTO-bU4</span>
+                        <video style="width: 100%;" preload loop="5" controls>
+                            <source src="img/vid/Auburn.mp4" type="video/mp4">
+                    </p>
+                    <p>
+                        <span>출처 - https://www.youtube.com/watch?v=L8jIrE81JQU</span>
+                        <video style="width: 100%;" preload loop="5" controls>
+                            <source src="img/vid/August.mp4" type="video/mp4">
+                    </p>
+                    <p>
+                        <span>출처 - https://www.youtube.com/watch?v=s5lJl_mfsoQ</span>
+                        <video style="width: 100%;" preload loop="5" controls>
+                            <source src="img/vid/Busan.mp4" type="video/mp4">
+                    </p>
+                    <p>
+                        <span>출처 - https://www.youtube.com/watch?v=AwMO7pVzkY4</span>
+                        <video style="width: 100%;" preload loop="5" controls>
+                            <source src="img/vid/gestalt.mp4" type="video/mp4">
+                    </p>
+                    <p>
+                        <span>출처 - https://www.youtube.com/watch?v=uu4GMRG3Gow</span>
+                        <video style="width: 100%;" preload loop="5" controls>
+                            <source src="img/vid/Josse!.mp4" type="video/mp4">
+                    </p>
+                    <p>
+                        <span>출처 - https://www.youtube.com/watch?v=mspOjrlJZKU</span>
+                        <video style="width: 100%;" preload loop="5" controls>
+                            <source src="img/vid/nite.mp4" type="video/mp4">
+                    </p>
+                    <p>
+                        <span>출처 - https://www.youtube.com/watch?v=xZcGqFXMCng</span>
+                        <video style="width: 100%;" preload loop="5" controls>
+                            <source src="img/vid/pattern.mp4" type="video/mp4">
+                    </p>
+                    <p>
+                        <span>출처 - https://www.youtube.com/watch?v=vpA30zzhRjw</span>
+                        <video style="width: 100%;" preload loop="5" controls>
+                            <source src="img/vid/Yours.mp4" type="video/mp4">
+                    </p>
+                    <p>
+                        <span>출처 - https://www.youtube.com/watch?v=n7r2HumskgU</span>
+                        <video style="width: 100%;" preload loop="5" controls>
+                            <source src="img/vid/너의 기사.mp4" type="video/mp4">
+                    </p>
+                    <p>
+                        <span>출처 - https://www.youtube.com/watch?v=GsU11KllWuY</span>
+                        <video style="width: 100%;" preload loop="5" controls>
+                            <source src="img/vid/창문.mp4" type="video/mp4">
+                    </p>
+                </div>
+                <div class="movie_list">
+                    <ul>
+                        <li class="on"><a href="#">Auburn</a></li>
+                        <li><a href="#">August</a></li>
+                        <li><a href="#">Busan</a></li>
+                        <li><a href="#">Gestalt</a></li>
+                        <li><a href="#">Josse!</a></li>
+                        <li><a href="#">nite</a></li>
+                        <li><a href="#">pattern</a></li>
+                        <li><a href="#">Yours</a></li>
+                        <li><a href="#">너의 기사</a></li>
+                        <li><a href="#">창문</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <article class="mouse">
+            <div class="mouse_inner">
+            </div>
+            <div class="cursor"></div>
+            <div class="title">
+                <p></p>
+                <h2>CONCERT</h2>
+            </div>
+            <div class="concert_slide">
+                <button>click</button>
+                <div class="box">
+                    <ul>
+                        <li><img src="img/con_001.jpg" alt=""></li>
+                        <li><img src="img/con_002.jpg" alt=""></li>
+                        <li><img src="img/con_003.jpg" alt=""></li>
+                        <li><img src="img/con_004.jpg" alt=""></li>
+                        <li><img src="img/con_005.jpg" alt=""></li>
+                        <li><img src="img/con_006.jpg" alt=""></li>
+                        <li><img src="img/con_007.jpg" alt=""></li>
+                        <li><img src="img/con_008.jpg" alt=""></li>
+                        <li><img src="img/con_009.jpg" alt=""></li>
+                        <li><img src="img/con_010.jpg" alt=""></li>
+                    </ul>
+                    <ul>
+                        <li><img src="img/con_011.jpg" alt=""></li>
+                        <li><img src="img/con_012.jpg" alt=""></li>
+                        <li><img src="img/con_013.jpg" alt=""></li>
+                        <li><img src="img/con_014.jpg" alt=""></li>
+                        <li><img src="img/con_015.jpg" alt=""></li>
+                        <li><img src="img/con_016.jpg" alt=""></li>
+                        <li><img src="img/con_017.jpg" alt=""></li>
+                        <li><img src="img/con_018.jpg" alt=""></li>
+                        <li><img src="img/con_019.jpg" alt=""></li>
+                        <li><img src="img/con_020.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="concert_info">
+                <ul>
+                    <li>Someday Festival 2022<p><span>장소</span>난지 한강공원</p><b><span>기간</span>2022.09.03 ~ 2022.09.04</b>
+                    </li>
+                    <li>2022 RESFFECT FESTIVAL<p><span>장소</span>올림픽공원 88잔디마당</p><b><span>기간</span>2022.08.27 ~
+                            2022.08.28</b></li>
+                    <li>Soundberry Festa' 22<p><span>장소</span>코엑스 그랜드볼룸 및 오디토리움 일대</p><b><span>기간</span>2022.07.23 ~
+                            2022.07.24</b></li>
+                    <li>A에서 시작되는 울림::데이먼스 이어 단독 콘서트<p><span>장소</span>KT&G 상상마당 춘천 아트센터</p>
+                        <b><span>기간</span>2022.06.05</b></li>
+                    <li>PEAK FESTIVAL 2022<p><span>장소</span>난지 한강공원</p><b><span>기간</span>2022.05.28</b></li>
+                    <li>Have A Nice Day X 전주국제영화제<p><span>장소</span>전주돔</p><b><span>기간</span>2022.05.05 ~ 2022.05.06</b>
+                    </li>
+                    <li>PEAKBOX 22-02<p><span>장소</span>구름아래소극장</p><b><span>기간</span>2022.04.23 ~ 2022.04.24</b></li>
+                    <li>2021 리스페스 안동x롤링홀<p><span>장소</span>안동 문화관광단지 내 천연잔디구장</p><b><span>기간</span>2021.11.06</b></li>
+                    <li>그랜드 민트 페스티벌 2021<p><span>장소</span>올림픽공원 88 잔디마당</p><b><span>기간</span>2021.10.16 ~ 2021.10.24</b>
+                    </li>
+                    <li>먼데이프로젝트 시즌4 [청춘의 밤]<p><span>장소</span>구름아래소극장</p><b><span>기간</span>2021.09.27 ~ 2021.09.29</b>
+                    </li>
+                </ul>
+                <ul>
+                    <li>데이먼스 이어 단독공연 'Setting Fires'<p><span>장소</span>노들섬 라이브하우스</p><b><span>기간</span>2021.08.13 ~
+                            2021.08.28</b></li>
+                    <li>GS25 뮤비페<p><span>장소</span>온라인</p><b><span>기간</span> 2021.07.17</b></li>
+                    <li>Beautiful Mint Life 2021 온라인<p><span>장소</span>온라인</p><b><span>기간</span> 2021.06.26 ~
+                            2021.06.27</b></li>
+                    <li>Beautiful Mint Life 2021 <p><span>장소</span>올림픽공원 88 잔디마당</p><b><span>기간</span> 2021.06.26 ~
+                            2021.06.27</b></li>
+                    <li>T Factory X FLO 덕콘 데이먼스 이어<p><span>장소</span>T팩토리</p><b><span>기간</span> 2021.06.11</b></li>
+                    <li>먼데이프로젝트 시즌3 성수 [데이먼스 이어] 시간이 흐르면<p><span>장소</span>아트스탠드</p><b><span>기간</span> 2020.12.28</b>
+                    </li>
+                    <li>먼데이프로젝트 시즌3 종로 [데이먼스 이어] 콘서트<p><span>장소</span>푸르지오 아트홀</p><b><span>기간</span> 2020.11.23</b></li>
+                    <li>데이먼스이어 단독 콘서트 'Cherry'<p><span>장소</span>백암아트홀</p><b><span>기간</span> 2020.07.04</b></li>
+                    <li>어떤 이야기를 들려드릴까요? 나만알고싶은인디특집 Ep. 1 데이먼스 이어 단독 콘서트<p><span>장소</span>폼텍웍스홀</p><b><span>기간</span>
+                            2020.02.21 ~ 2020.03.01</b></li>
+                    <li>누군가의 플레이리스트 Track. 18 데이먼스 이어 소극장 장기 단독 콘서트<p><span>장소</span>폼텍웍스홀</p><b><span>기간</span>
+                            2029.12.13 ~ 2019.12.14</b></li>
+                </ul>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>
+            본 사이트는 교육용 포트폴리오 사이트이며, 상업용으로 활용하지 않습니다.<br>
+            <em>copyright &copy; KimSoYeon.2022.08.All Rights Reserved.</em>
+        </p>
+    </footer>
+</body>
+
+</html>
