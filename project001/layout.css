@@ -1,0 +1,141 @@
+
+@charset "UTF-8";
+
+
+/* 전체 설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* 레이아웃 설정 */
+/* 박스 A 가로 설정 */
+.boxA {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box1 {
+    width: 30%;
+    height: 100px;
+}
+
+.box2 {
+    width: 100%;
+    height: 60px;
+}
+
+/* 박스3,4 설정 */
+.box3 {
+    height: 700px;
+    width: 100%;
+}
+.box4 {
+    display: none;
+}
+
+
+/* 박스 B 가로 설정 */
+.boxB {
+    display: flex;
+    height: 100px;
+
+}
+
+.box5 {
+    width: 50%;
+}
+.box6 {
+    width: 50%;
+}
+
+
+/* 박스 C 가로 설정 */
+.boxC {
+    display: flex;
+    height: 1000px;
+}
+.box7 {
+    width: 30%;
+}
+.box8 {
+    width: 70%;
+}
+
+/* 박스 D 가로 설정 */
+.boxD {
+    display: flex;
+    flex-wrap: wrap;
+    height: 1100px;
+}
+.box9 {
+    width: 100%;
+    height: 700px;
+}
+.box10 {
+    width: 100%;
+    height: 400px;
+}
+
+
+/* 박스 E 가로 설정 */
+.boxE {
+    display: flex;
+    height: 800px;
+}
+.box11 {
+    width: 30%;
+}
+.box12 {
+    width: 70%;
+}
+
+
+/* 박스 F 가로 설정 */
+.boxF {
+    display: flex;
+    width: 100%;
+    height: 600px;
+}
+
+.box13 {
+    width: 50%;
+}
+.box14 {
+    width: 50%;
+}
+
+
+/* 박스 15 */
+.box15 {
+    height: 800px;
+}
+
+/* 박스 G 가로 설정 */
+.boxG {
+    width: 100%;
+    display: flex;
+    height: 900px;
+}
+.box16 {
+    width: 50%;
+}
+.box17 {
+    width: 50%;
+}
+
+
+/* 박스 18 */
+.box18 {
+    height: 400px;
+}

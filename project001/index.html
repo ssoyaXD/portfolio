@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대전광역시 동물보호센터</title>
+
+    <!-- 그리드 가이드 연결 
+    <link rel="stylesheet" href="grid-guide.css"> -->
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- 폰트어썸 CDN -->
+    <script src="https://kit.fontawesome.com/065a7003c3.js" crossorigin="anonymous"></script>
+    <!-- 제이쿼리 선언문 -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- 외부 js 연결 -->
+    <script src="javascript.js"></script>
+
+    <!-- 아이콘/파비콘 설정-->
+    <!-- 웹 & 안드 -->
+    <link rel="shortcut icon" href="img/icon_2.png" type="image/x-icon">
+    <!-- 아이폰 -->
+    <link rel="apple-touch-icon" href="img/icon_2.png" type="image/x-icon">
+    <!-- 웹 앱 전체 화면 설정 -->
+    <!-- 안드 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 아이폰 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+</head>
+
+<body>
+    <!-- 로고와 gnb -->
+    <div class="boxA">
+        <div class="box1">
+            <div class="logo">
+                <h1>
+                    <a href="#"><img src="img/logo.png" alt="대전동물보호센터"></a>
+                </h1>
+            </div>
+        </div>
+        <div class="box2">
+            <nav class="gnb">
+                <section class="top">
+                    <ul class="menu">
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">정보</a></li>
+                        <li><a href="#">입양</a></li>
+                        <li><a href="#">참여마당</a></li>
+                    </ul>
+                </section>
+                <section class="bottom">
+                    <section class="bottom_inner">
+                        <article class="box"></article>
+                        <article class="submenu">
+                            <ul>
+                                <li><a href="#">센터소개</a></li>
+                                <li><a href="#">주요업무</a></li>
+                                <li><a href="#">보호절차</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">고려사항</a></li>
+                                <li><a href="#">준수사항</a></li>
+                                <li><a href="#">동물등록제</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">보호동물</a></li>
+                                <li><a href="#">입양후기</a></li>
+                                <li><a href="#">입양자교육</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">찾아주세요</a></li>
+                                <li><a href="#">봉사활동지원</a></li>
+                                <li><a href="#">후원금지원</a></li>
+                                <li><a href="#">나눔해요</a></li>
+                                <li><a href="#">자주묻는질문</a></li>
+                            </ul>
+                        </article>
+                    </section>
+                </section>
+
+                <ul class="util">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li><a href="#">대전광역시청</a></li>
+                    <li><a href="#">동물보호관리시스템</a></li>
+                </ul>
+                <div class="text_size_btn">
+                    <p><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></p>
+                    <p>글자크기</p>
+                    <p><a href="#"><i class="fa fa-minus" aria-hidden="true"></i></a></p>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- 랜딩 이미지와 랜딩타이틀 -->
+    <div class="box3">
+        <div class="landing_img">
+            <img src="img/landing.jpg" alt="강아지">
+        </div>
+        <div class="circle">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div class="landing_txt">
+            <p><span>책임감</span>은</p>
+            <p><span>반려동물</span>과의</p>
+            <p><span>약속</span>입니다</p>
+            <p>반려동물, 사랑으로 입양하세요<br>
+                여러분의 삶이 행복해집니다</p>
+        </div>
+        <div class="path">
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+
+    <!-- 공지사항과 자주묻는질문 -->
+    <div class="boxB">
+        <div class="boxB_inner">
+            <div class="box5">
+                <div class="notice">
+                    <h2>공지사항</h2>
+                    <ul>
+                        <li><a href="#">
+                                <div class="txt">대전동물보호센터 휴관일 안내</div><time datetime="2022-05-11">2022.05.11</time>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="txt">유기견 입양예정자 사전교육 안내(필수)</div><time
+                                    datetime="2022-04-04">2022.04.04</time>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="txt">반려동물 사육•관리 의무에 따른 입양 안내</div><time
+                                    datetime="2022-03-14">2022.03.14</time>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="txt">2022년 유실·유기동물 입양비 지원안내</div><time
+                                    datetime="2022-01-03">2022.01.03</time>
+                            </a></li>
+                    </ul>
+                    <div class="icon_set">
+                        <p>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+                                    aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <title>Navigation Up</title>
+                                    <desc>A solid styled icon from Orion Icon Library.</desc>
+                                    <path data-name="layer1"
+                                        d="M43 40a2.992 2.992 0 0 1-2.121-.879l-8.89-8.635-8.868 8.635a3 3 0 0 1-4.242-4.242L31.989 22l13.132 12.879A3 3 0 0 1 43 40z"
+                                        fill="#F1F8FF"></path>
+                                </svg>
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+                                    aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <title>Navigation Down</title>
+                                    <desc>A solid styled icon from Orion Icon Library.</desc>
+                                    <path data-name="layer1"
+                                        d="M21 22a2.99 2.99 0 0 1 2.121.879l8.89 8.636 8.868-8.636a3 3 0 0 1 4.242 4.242L32.011 40 18.879 27.121A3 3 0 0 1 21 22z"
+                                        fill="#F1F8FF"></path>
+                                </svg>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box6">
+                <div class="qna">
+                    <h2>자주묻는질문</h2>
+                    <ul>
+                        <li>청소년이 보호자를 동반하여 봉사활동이 가능한가요?</li>
+                    </ul>
+                    <p>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+                                aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>Add</title>
+                                <desc>A solid styled icon from Orion Icon Library.</desc>
+                                <path data-name="layer1"
+                                    d="M53 29H35V11a3 3 0 0 0-6 0v18H11a3 3 0 0 0 0 6h18v18a3 3 0 0 0 6 0V35h18a3 3 0 0 0 0-6z"
+                                    fill="#F1F8FF"></path>
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 찾아주세요 이미지와 텍스트 -->
+    <div class="boxC content">
+        <div class="boxC_inner">
+            <div class="title">
+                <p class="dot"></p>
+                <h2>찾아주세요</h2>
+            </div>
+            <p class="callme">※ 실종 동물 발견 시 <strong>즉시 연락</strong> 바랍니다.</p>
+            <div class="card">
+                <div class="box7">
+                    <div class="missing_img on">
+                        <p><a href="#"></a></p>
+                    </div>
+                    <div class="missing_img">
+                        <p><a href="#"></a></p>
+                    </div>
+                    <div class="missing_img">
+                        <p><a href="#"></a></p>
+                    </div>
+                </div>
+                <div class="box8">
+                    <div class="missing_txt on">
+                        <table border="0">
+                            <tr>
+                                <td>종류</td>
+                                <td>고양이</td>
+                            </tr>
+                            <tr>
+                                <td>품종</td>
+                                <td>샴</td>
+                            </tr>
+                            <tr>
+                                <td>성별</td>
+                                <td>암</td>
+                            </tr>
+                            <tr>
+                                <td>분실장소</td>
+                                <td>대전선화동</td>
+                            </tr>
+                            <tr>
+                                <td>분실날짜</td>
+                                <td>2022.06.09</td>
+                            </tr>
+                            <tr>
+                                <td>나이</td>
+                                <td>8살</td>
+                            </tr>
+                            <tr>
+                                <td>몸무게</td>
+                                <td>4.45</td>
+                            </tr>
+                            <tr>
+                                <td>모색</td>
+                                <td>흰색</td>
+                            </tr>
+                            <tr>
+                                <td>이름</td>
+                                <td>리옹이</td>
+                            </tr>
+                            <tr>
+                                <td>특징</td>
+                                <td>엉덩이에 동그란 무늬</td>
+                            </tr>
+                        </table>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i>010-1234-5678</p>
+                    </div>
+                    <div class="missing_txt">
+                        <table border="0">
+                            <tr>
+                                <td>종류</td>
+                                <td>강아지</td>
+                            </tr>
+                            <tr>
+                                <td>품종</td>
+                                <td>포메라니안</td>
+                            </tr>
+                            <tr>
+                                <td>성별</td>
+                                <td>수</td>
+                            </tr>
+                            <tr>
+                                <td>분실장소</td>
+                                <td>대전목동</td>
+                            </tr>
+                            <tr>
+                                <td>분실날짜</td>
+                                <td>2022.07.01</td>
+                            </tr>
+                            <tr>
+                                <td>나이</td>
+                                <td>2살</td>
+                            </tr>
+                            <tr>
+                                <td>몸무게</td>
+                                <td>2.3</td>
+                            </tr>
+                            <tr>
+                                <td>모색</td>
+                                <td>흰색</td>
+                            </tr>
+                            <tr>
+                                <td>이름</td>
+                                <td>마루</td>
+                            </tr>
+                            <tr>
+                                <td>특징</td>
+                                <td>민트색 옷, 다리를 절뚝거림</td>
+                            </tr>
+                        </table>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i>010-0000-0000</p>
+                    </div>
+                    <div class="missing_txt">
+                        <table border="0">
+                            <tr>
+                                <td>종류</td>
+                                <td>강아지</td>
+                            </tr>
+                            <tr>
+                                <td>품종</td>
+                                <td>비숑</td>
+                            </tr>
+                            <tr>
+                                <td>성별</td>
+                                <td>수</td>
+                            </tr>
+                            <tr>
+                                <td>분실장소</td>
+                                <td>대전갈마동</td>
+                            </tr>
+                            <tr>
+                                <td>분실날짜</td>
+                                <td>2022.07.03</td>
+                            </tr>
+                            <tr>
+                                <td>나이</td>
+                                <td>3살</td>
+                            </tr>
+                            <tr>
+                                <td>몸무게</td>
+                                <td>6.4</td>
+                            </tr>
+                            <tr>
+                                <td>모색</td>
+                                <td>흰색</td>
+                            </tr>
+                            <tr>
+                                <td>이름</td>
+                                <td>구름</td>
+                            </tr>
+                            <tr>
+                                <td>특징</td>
+                                <td>분홍색 옷, 삼색 목줄 착용</td>
+                            </tr>
+                        </table>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i>010-8756-4321</p>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <p><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i>실종신고</a></p>
+            </div>
+            <div class="icon_set">
+                <p>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+                            aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>Angle Left</title>
+                            <desc>A solid styled icon from Orion Icon Library.</desc>
+                            <path data-name="layer1" fill="#F0B965"
+                                d="M24 32.001L38 46l4-4.485-9.515-9.514L42 22.487 38 18 24 32.001z"></path>
+                        </svg>
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+                            aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>Angle Right</title>
+                            <desc>A solid styled icon from Orion Icon Library.</desc>
+                            <path data-name="layer1" fill="#F0B965"
+                                d="M40 31.998L26 18l-4 4.486 9.515 9.512L22 41.513 26 46l14-14.002z"></path>
+                        </svg>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 보호동물과 보호절차 -->
+    <div class="boxD content">
+        <div class="boxD_inner">
+            <div class="box9">
+                <div class="title">
+                    <p class="dot"></p>
+                    <h2>보호동물</h2>
+                </div>
+                <div class="pic_set">
+                    <div class="pic_set_img">
+                        <!-- 사진1 -->
+                        <div class="pic">
+                            <p class="tape"></p>
+                            <a href="#">
+                                <div class="pic_inner_001">
+                                    <p class="pic_txt">대전-서구_고양이(삼색이)<span>2022.07.11</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 사진2 -->
+                        <div class="pic">
+                            <p class="tape"></p>
+                            <a href="#">
+                                <div class="pic_inner_002">
+                                    <p class="pic_txt">대전-서구_고양이(치즈)<span>2022.07.11</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 사진3 -->
+                        <div class="pic">
+                            <p class="tape"></p>
+                            <a href="#">
+                                <div class="pic_inner_003">
+                                    <p class="pic_txt">대전-서구_고양이(무)<span>2022.07.10</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 사진4 -->
+                        <div class="pic">
+                            <p class="tape"></p>
+                            <a href="#">
+                                <div class="pic_inner_004">
+                                    <p class="pic_txt">대전-서구_강아지(천하)<span>2022.07.06</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 사진5 -->
+                        <div class="pic">
+                            <p class="tape"></p>
+                            <a href="#">
+                                <div class="pic_inner_005">
+                                    <p class="pic_txt">대전-서구_강아지(태평)<span>2022.07.01</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 사진6 -->
+                        <div class="pic">
+                            <p class="tape"></p>
+                            <a href="#">
+                                <div class="pic_inner_006">
+                                    <p class="pic_txt">대전-서구_강아지(인절미)<span>2022.06.29</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 사진7 -->
+                        <div class="pic">
+                            <p class="tape"></p>
+                            <a href="#">
+                                <div class="pic_inner_007">
+                                    <p class="pic_txt">대전-서구_고양이(용이)<span>2022.06.28</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 사진8 -->
+                        <div class="pic">
+                            <p class="tape"></p>
+                            <a href="#">
+                                <div class="pic_inner_008">
+                                    <p class="pic_txt">대전-서구_강아지(폴드)<span>2022.06.27</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 사진9 -->
+                        <div class="pic">
+                            <p class="tape"></p>
+                            <a href="#">
+                                <div class="pic_inner_009">
+                                    <p class="pic_txt">대전-서구_고양이(시월이)<span>2022.06.27</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 사진10 -->
+                        <div class="pic">
+                            <p class="tape"></p>
+                            <a href="#">
+                                <div class="pic_inner_010">
+                                    <p class="pic_txt">대전-서구_강아지(루루)<span>2022.06.25</span></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box10">
+                <h3>보호절차</h3>
+                <p class="protect_txt">대전광역시 동물보호센터에서 실행하는 유기·유실동물 보호절차에 대해 알려 드립니다.</p>
+                <div class="protect_info">
+                    <p></p>
+                </div>
+                <p class="protect_txt">※ 공고기간에 치료가 필요한 동물 등은 임시보호가 가능합니다.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 인스타그램 텍스트와 이미지 -->
+    <div class="boxE">
+        <div class="box11">
+            <div class="insta_txt">
+                <h3>대전동물보호센터<br>
+                    인스타그램</h3>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <p>대전동물보호센터의 동물들을
+                    <span>인스타그램</span>을 통해 만나보세요!</p>
+            </div>
+        </div>
+        <div class="box12">
+            <div class="insta_img_set">
+                <div class="insta_img on">
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                </div>
+                <div class="insta_img">
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                </div>
+                <div class="insta_img">
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                    <p><a href="#">@daejeonAni</a></p>
+                </div>
+            </div>
+            <div class="icon_set">
+                <p>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+                            aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>Angle Left</title>
+                            <desc>A solid styled icon from Orion Icon Library.</desc>
+                            <path data-name="layer1" fill="#5D71A0"
+                                d="M24 32.001L38 46l4-4.485-9.515-9.514L42 22.487 38 18 24 32.001z"></path>
+                        </svg>
+                    </a>
+                </p>
+                <p>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+                            aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>Angle Right</title>
+                            <desc>A solid styled icon from Orion Icon Library.</desc>
+                            <path data-name="layer1" fill="#5D71A0"
+                                d="M40 31.998L26 18l-4 4.486 9.515 9.512L22 41.513 26 46l14-14.002z"></path>
+                        </svg>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 입양 절차와 준수사항, 고려사항 -->
+    <div class="boxF content">
+        <div class="boxF_inner">
+            <div class="title">
+                <p class="dot"></p>
+                <h2>입양절차</h2>
+            </div>
+            <div class="box13">
+                <div class="adopt_info">
+                    <p></p>
+                    <p>대전동물보호센터<br> 사이트에서 보호동물 확인</p>
+                    <p>상담날짜 예약후,<br> <strong>1차 방문</strong>하여 신청서 작성</p>
+                    <p>신청서를 토대로<br> 가장 적합한 입양자 선정</p>
+                    <p>입양 확정 후,<br> <strong>2차 방문</strong>하여 교육 수료</p>
+                </div>
+            </div>
+            <div class="box14">
+                <div class="adopt_txt">
+                    <h3>준수사항</h3>
+                    <ul>
+                        <li>적절한 사육 관리는 동물소유자의 의무</li>
+                        <li>동물학대는 법으로 처벌받는 범죄</li>
+                        <li>외출 시 목줄과 이름표는 필수품 </li>
+                        <li>배설물은 즉시 수거</li>
+                    </ul>
+                    <h3>고려사항</h3>
+                    <ul>
+                        <li>반려동물의 수명은 10~15세</li>
+                        <li>동물 털이나 분비물에 알레르기가 있는지 체크</li>
+                        <li>반려동물 건강관리는 필수</li>
+                    </ul>
+                    <div class="btn">
+                        <p><a href="#">입양하기</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 입양 후기 -->
+    <div class="box15">
+        <div class="adopt_review">
+            <div class="title">
+                <p class="dot"></p>
+                <h2>입양후기</h2>
+                <p class="txt">반려동물로 새 삶을 시작한 동물들의 소식</p>
+            </div>
+            <div class="img">
+                <div class="img_set">
+                    <p><a href="#"><span>보호소에 함께 있던 친구</span></a></p>
+                    <p><a href="#"><span>냥일입양첫날</span></a></p>
+                    <p><a href="#"><span>꽁지랑 함께한지 한달</span></a></p>
+                    <p><a href="#"><span>귀여운 우리 용이</span></a></p>
+                    <p><a href="#"><span>박스를 좋아하네요..^^</span></a></p>
+                    <p><a href="#"><span>친구랑 산책</span></a></p>
+                </div>
+            </div>
+            <div class="icon_set">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+                        aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>Angle Left</title>
+                        <desc>A solid styled icon from Orion Icon Library.</desc>
+                        <path data-name="layer1" fill="#F0B965"
+                            d="M24 32.001L38 46l4-4.485-9.515-9.514L42 22.487 38 18 24 32.001z"></path>
+                    </svg>
+                </p>
+                <p>
+                    <i class="fa fa-pause" aria-hidden="true"></i>
+                </p>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+                        aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>Angle Right</title>
+                        <desc>A solid styled icon from Orion Icon Library.</desc>
+                        <path data-name="layer1" fill="#F0B965"
+                            d="M40 31.998L26 18l-4 4.486 9.515 9.512L22 41.513 26 46l14-14.002z"></path>
+                    </svg>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 오시는길과 후원금 지원 -->
+    <div class="boxG content">
+        <div class="boxG_inner">
+            <div class="box16">
+                <div class="map">
+                    <h2>오시는 길</h2>
+                    <div class="map_img">
+                        <p>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12835.788838894132!2d127.3742832394171!3d36.45883203844653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ab35759eb49f9%3A0x4e667dc771de408c!2z64yA7KCE6rSR7Jet7IucIOuPmeusvOuztO2YuOyEvO2EsA!5e0!3m2!1sko!2skr!4v1656840392354!5m2!1sko!2skr"
+                                width="560" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </p>
+                    </div>
+                    <div class="con">
+                        <h3>운영시간 및 연락처</h3>
+                        <div class="contact">
+                            <p><span>운영시간</span> 10:00 ~ 18:00 <br>
+                                <span>점심시간</span> 12:00 ~ 13:00 <br>
+                                <span>입양시간</span> 13:00 ~ 16:00</p>
+                            <p><span>TEL</span> 042-825-1118 <br>
+                                <span>FAX</span> 042-825-1330</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box17">
+                <div class="support">
+                    <h2>후원금 지원</h2>
+                    <div class="sup_info">
+                        <div class="sup_img">
+                            <p></p>
+                        </div>
+                        <div class="con">
+                            <p>유기동물들에게 <span>따뜻한 사랑의 손길</span>을 건네주세요.<br>
+                                <span>당신의 도움</span>으로 유기동물의 세상을 바꿀 수 있습니다.</p>
+                        </div>
+                        <div class="btn">
+                            <p><a href="#">일시후원</a></p>
+                            <p><a href="#">정기후원</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div class="box18">
+        <div class="footer">
+            <div class="footer_top">
+                <p class="footer_logo_img"></p>
+                <div class="footer_sns_icon">
+                    <p class="facebook"><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></p>
+                    <p class="instagram"><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></p>
+                    <p class="twitter"><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></p>
+                </div>
+            </div>
+            <ul>
+                <li><a href="a">개인정보처리방침</a></li>
+                <li><a href="a">영상정보처리기기 운영ㆍ관리방침</a>
+                </li>
+                <li><a href="a">홈페이지
+                        개선의견</a></li>
+                <li><a href="#">오시는길</a></li>
+            </ul>
+            <p class="address">(34001) 대전광역시 유성구 금남구즉로 1234(금고동) / <span>대표전화</span>(042) 825-1118</p>
+            <p class="copy">Copyright ⓒ KimSoYeon.2022.All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <div class="quick_btn">
+        <ul>
+            <li><a href="#">MAIN</a></li>
+            <li><a href="#">분실</a></li>
+            <li><a href="#">보호동물</a></li>
+            <li><a href="#">입양</a></li>
+            <li><a href="#">오시는길</a></li>
+            <!-- <li><a href="#">Quick<i class="fa fa-angle-down" aria-hidden="true"></i></a></li> -->
+        </ul>
+    </div>
+
+</body>
+
+</html>
