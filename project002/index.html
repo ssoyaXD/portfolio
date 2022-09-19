@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페리페라</title>
+
+    <!-- 그리드 가이드 연결  
+    <link rel="stylesheet" href="grid-guide.css"> -->
+    <!-- 외부 스타일 시트 연결 -->
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- 폰트어썸 CDN -->
+    <script src="https://kit.fontawesome.com/065a7003c3.js" crossorigin="anonymous"></script>
+    <!-- 제이쿼리 선언문 -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- 외부 js 연결 -->
+    <script src="javascript.js"></script>
+
+    <!-- 아이콘/파비콘 설정-->
+    <!-- 웹 & 안드 -->
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <!-- 아이폰 -->
+    <link rel="apple-touch-icon" href="img/icon.png" type="image/x-icon">
+    <!-- 웹 앱 전체 화면 설정 -->
+    <!-- 안드 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 아이폰 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+</head>
+
+<body>
+    <!-- 로고와 메뉴 -->
+    <div class="wrap">
+        <div class="boxX">
+            <div class="boxX_inner">
+                <nav class="fixed_menu">
+                    <ul class="menu">
+                        <li><a href="#">SHOPPING</a>
+                        </li>
+                        <li><a href="#">BRAND</a>
+                            <ul>
+                                <li><em></em><a href="#"><span>브랜드 소개</span></a></li>
+                                <li><em></em><a href="#"><span>매장 소개</span></a></li>
+                                <li><em></em><a href="#"><span>페리 뉴스</span></a></li>
+                                <li><em></em><a href="#"><span>기업 소개</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><img src="img/logo.png" alt="페리페라"></a>
+                        </li>
+                        <li><a href="#">PRODUCT</a>
+                            <ul>
+                                <li><em></em><a href="#"><span>신제품</span></a></li>
+                                <li><em></em><a href="#"><span>베스트</span></a></li>
+                                <li><em></em><a href="#"><span>유형별</span></a></li>
+                                <li><em></em><a href="#"><span>컬렉션별</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">MEDIA</a>
+                            <ul>
+                                <li><em></em><a href="#"><span>영상</span></a></li>
+                                <li><em></em><a href="#"><span>sns</span></a></li>
+                                <li><em></em><a href="#"><span>디지털 굿즈</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="boxA">
+            <div class="boxA_inner">
+                <header>
+                    <div class="box1">
+                        <div class="logo">
+                            <h1>페리페라</h1>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <nav>
+                            <div class="gnb">
+                                <ul class="menu">
+                                    <li><a href="#">SHOPPING</a>
+                                    </li>
+                                    <li><a href="#">BRAND</a>
+                                        <ul>
+                                            <li><em></em><a href="#"><span>브랜드 소개</span></a></li>
+                                            <li><em></em><a href="#"><span>매장 소개</span></a></li>
+                                            <li><em></em><a href="#"><span>페리 뉴스</span></a></li>
+                                            <li><em></em><a href="#"><span>기업 소개</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#"><img src="img/logo.png" alt="페리페라"></a>
+                                    </li>
+                                    <li><a href="#">PRODUCT</a>
+                                        <ul>
+                                            <li><em></em><a href="#"><span>신제품</span></a></li>
+                                            <li><em></em><a href="#"><span>베스트</span></a></li>
+                                            <li><em></em><a href="#"><span>유형별</span></a></li>
+                                            <li><em></em><a href="#"><span>컬렉션별</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">MEDIA</a>
+                                        <ul>
+                                            <li><em></em><a href="#"><span>영상</span></a></li>
+                                            <li><em></em><a href="#"><span>sns</span></a></li>
+                                            <li><em></em><a href="#"><span>디지털 굿즈</span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="util_language">
+                                    <li class="on"><a href="#">KOR</a></li>
+                                    <li><a href="#">ENG</a></li>
+                                    <li><a href="#">CHN</a></li>
+                                </ul>
+                                <div class="cart">
+                                    <p><a href="#"><span>0</span><i class="fa fa-shopping-cart"
+                                                aria-hidden="true"></i></a></p>
+                                </div>
+                                <div class="util_search">
+                                    <input type="text" placeholder="search...">
+                                    <p>
+                                        <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+    <!-- 랜딩페이지 -->
+    <div class="boxB">
+        <div class="landing_bar"></div>
+        <div class="boxB_inner">
+            <div class="landing_txt on">
+                <p class="click_txt">Click!</p>
+                <p class="square001"></p>
+                <p class="square002"></p>
+                <p class="txt001">Peaches</p>
+                <p class="txt002">collection</p>
+                <p class="txt003">#에어리벨벳 #물복딱복컬렉션</p>
+            </div>
+            <div class="landing_txt">
+                <p class="click_txt">임시이미지~</p>
+                <p class="square001"></p>
+                <p class="square002"></p>
+                <p class="txt001">임시</p>
+                <p class="txt002">텍스트</p>
+                <p class="txt003">#임시 #임시</p>
+            </div>
+            <div class="landing_txt">
+                <p class="click_txt">임시이미지~</p>
+                <p class="square001"></p>
+                <p class="square002"></p>
+                <p class="txt001">주말에</p>
+                <p class="txt002">하겠습니다..!</p>
+                <p class="txt003">#임 #시</p>
+            </div>
+            <div class="landing_img">
+                <div class="landing on">
+                    <div class="banner">
+                        <p class="back"></p>
+                        <p class="p11"></p>
+                        <p class="p12"></p>
+                    </div>
+                    <div class="st_img_set on">
+                        <div class="st_set">
+                            <p class="title_st"></p>
+                            <p class="st001"></p>
+                        </div>
+                        <div class="hover_img"></div>
+                    </div>
+                </div>
+                <!-- <div class="landing">
+                    <div class="banner">
+                        <p class="back"></p>
+                        <p class="p11"></p>
+                        <p class="p12"></p>
+                    </div>
+                    <div class="st_img_set">
+                        <div class="st_set">
+                            <p class="title_st"></p>
+                            <p class="st001"></p>
+                        </div>
+                        <div class="hover_img">임시호버~</div>
+                    </div>
+                </div>
+                <div class="landing">
+                    <div class="banner">
+                        <p class="back"></p>
+                        <p class="p11"></p>
+                        <p class="p12"></p>
+                    </div>
+                    <div class="st_img_set">
+                        <div class="st_set">
+                            <p class="title_st"></p>
+                            <p class="st001"></p>
+                        </div>
+                        <div class="hover_img">임시호버~</div>
+                    </div>
+                </div>
+                <div class="banner_btn">
+                    <p class="on"><a href="#"></a></p>
+                    <p><a href="#"></a></p>
+                    <p><a href="#"></a></p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- 펠스토랑 -->
+    <div id="wrap">
+        <section class="con01">
+            <div class="boxC_title">
+            </div>
+            <div class="boxC">
+                <div class="bgImg">
+                    <div>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="rest_video">
+                    <p>
+                        <iframe width="65%" height="50%" src="https://www.youtube.com/embed/JhWUnvKrM-w"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </p>
+                </div>
+                <p class="square"></p>
+            </div>
+        </section>
+        <!-- 잉크 에어리 벨벳 -->
+        <section class="con02">
+            <div class="boxD">
+                <div class="boxD_img">
+                    <p class="square"></p>
+                    <div class="bg_img">
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="boxD_txt">
+                    <div class="bg_txt">
+                        <p class="txt">peripera</p>
+                        <p class="txt">peripera</p>
+                    </div>
+                </div>
+                <div class="view">
+                    <div class="lip_set">
+                        <div class="lip_title">
+                            <p></p>
+                            <p></p>
+                            <p>INK AIRY VELVET</p>
+                        </div>
+                        <div class="show_color">
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <!-- 립 -->
+                        <div class="lip">
+                            <div class="lip_info">
+                                <div class="lip_name">
+                                    <p class="on">Cartoon Coral</p>
+                                    <p>Heart Grapefruit</p>
+                                    <p>Pretty Orange Pink</p>
+                                    <p>Morning Grapefruit</p>
+                                    <p>Soft Coral</p>
+                                    <p>Favorite Orange Pink</p>
+                                    <p>Elf Light Rose</p>
+                                    <p>Beautiful Coral Pink</p>
+                                </div>
+                                <div class="lip_txt">
+                                    <p class="on">웜, 쿨 가리지 않고 데일리 베이스로 사용하기 좋은 차분한 코랄 립</p>
+                                    <p>레드에 오렌지 한 방울 떨어트린 맑은 다홍빛 레드 립</p>
+                                    <p>최애 신드롬의 주인공! 혈색 살리는 봄웜 핑크 코랄 립</p>
+                                    <p>가을 분위기 더해주는 톤 다운 레드 자몽 립</p>
+                                    <p>웜톤이 쉽게 바르기 좋은 핑크 한 방울 들어간 코랄 립</p>
+                                    <p>분위기를 한 스푼 추가하고 형광기를 덜어낸 코랄 핑크 립</p>
+                                    <p>단종템 부활! 적당히 톤다운된 MLBB 뮤트 로즈 립</p>
+                                    <p>단종템 부활! 푸른빛 더해 희소성 있는 푸시아 핑크 립</p>
+                                    <div class="cursor">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="lip_img">
+                                    <p class="on"><a href="#"></a></p>
+                                    <p><a href="#"></a></p>
+                                    <p><a href="#"></a></p>
+                                    <p><a href="#"></a></p>
+                                    <p><a href="#"></a></p>
+                                    <p><a href="#"></a></p>
+                                    <p><a href="#"></a></p>
+                                    <p><a href="#"></a></p>
+                                </div>
+                                <div class="lip_test_img">
+                                    <p class="on"></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                                <div class="color_chip">
+                                    <p><a href="#"></a></p>
+                                    <p><a href="#"></a></p>
+                                    <p><a href="#"></a></p>
+                                    <p><a href="#"></a></p>
+                                    <p><a href="#"></a></p>
+                                    <p><a href="#"></a></p>
+                                    <p><a href="#"></a></p>
+                                    <p><a href="#"></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- new & best -->
+        <section class="con03">
+            <div class="con03_inner">
+                <div class="boxE">
+                    <div class="title">
+                        <h3>NEW & BEST!</h3>
+                        <p></p>
+                    </div>
+                    <div class="product_out">
+                        <div class="product_info">
+                            <div class="product_set">
+                                <div class="product">
+                                    <p>Ink Airy Velvet</p>
+                                    <p><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                    <div class="btn_set">
+                                        <p><a href="#">Lip</a></p>
+                                        <p><a href="#">Learn More<i class="fa fa-chevron-right"
+                                                    aria-hidden="true"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <p>Duo Pocket Glitter Shadow</p>
+                                    <p><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                    <div class="btn_set">
+                                        <p><a href="#">Shadow</a></p>
+                                        <p><a href="#">Learn More<i class="fa fa-chevron-right"
+                                                    aria-hidden="true"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <p>Pure Blushed Sunshine Cheek</p>
+                                    <p><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                    <div class="btn_set">
+                                        <p><a href="#">Cheek</a></p>
+                                        <p><a href="#">Learn More<i class="fa fa-chevron-right"
+                                                    aria-hidden="true"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <p>Pure Blushed Sunshine Cheek</p>
+                                    <p><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                    <div class="btn_set">
+                                        <p><a href="#">Cheek</a></p>
+                                        <p><a href="#">Learn More<i class="fa fa-chevron-right"
+                                                    aria-hidden="true"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <p>Pure Blushed Sunshine Cheek</p>
+                                    <p><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                    <div class="btn_set">
+                                        <p><a href="#">Cheek</a></p>
+                                        <p><a href="#">Learn More<i class="fa fa-chevron-right"
+                                                    aria-hidden="true"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <p>Pure Blushed Sunshine Cheek</p>
+                                    <p><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                    <div class="btn_set">
+                                        <p><a href="#">Cheek</a></p>
+                                        <p><a href="#">Learn More<i class="fa fa-chevron-right"
+                                                    aria-hidden="true"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <p>Pure Blushed Sunshine Cheek</p>
+                                    <p><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                    <div class="btn_set">
+                                        <p><a href="#">Cheek</a></p>
+                                        <p><a href="#">Learn More<i class="fa fa-chevron-right"
+                                                    aria-hidden="true"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <p>Pure Blushed Sunshine Cheek</p>
+                                    <p><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                    <div class="btn_set">
+                                        <p><a href="#">Cheek</a></p>
+                                        <p><a href="#">Learn More<i class="fa fa-chevron-right"
+                                                    aria-hidden="true"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product">
+                                    <p>Pure Blushed Sunshine Cheek</p>
+                                    <p><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></p>
+                                    <div class="btn_set">
+                                        <p><a href="#">Cheek</a></p>
+                                        <p><a href="#">Learn More<i class="fa fa-chevron-right"
+                                                    aria-hidden="true"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popUp"><span><em></em></span><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+        <div class="con03_wrap">
+            <div class="con03_wrap_inner">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <!-- peripera sns -->
+        <section class="con04">
+            <div class="boxF">
+                <div class="sns_cursor"></div>
+                <div class="title">
+                    <h3>PERIPERA SNS</h3>
+                    <p></p>
+                </div>
+                <div class="sns_info">
+                    <div class="sns_set_001">
+                        <p><a href="https://www.instagram.com/peripera_official/"><span>@peripera_official</span></a>
+                        </p>
+                        <p><a href="https://www.instagram.com/peripera_official/"><span>@peripera_official</span></a>
+                        </p>
+                        <p><a href="https://www.instagram.com/peripera_official/"><span>@peripera_official</span></a>
+                        </p>
+                        <p><a href="https://www.instagram.com/peripera_official/"><span>@peripera_official</span></a>
+                        </p>
+                    </div>
+                    <div class="sns_set_002">
+                        <p><a href="https://www.instagram.com/peripera_official/"><span>@peripera_official</span></a>
+                        </p>
+                        <p><a href="https://www.instagram.com/peripera_official/"><span>@peripera_official</span></a>
+                        </p>
+                        <p><a href="https://www.instagram.com/peripera_official/"><span>@peripera_official</span></a>
+                        </p>
+                        <p><a href="https://www.instagram.com/peripera_official/"><span>@peripera_official</span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="boxG">
+            <div class="footer_top">
+                <p class="footer_logo_img"></p>
+                <div class="number">
+                    <p>고객상담실<span>080-080-1510</span></p>
+                    <p>상담안내시간 월~금 09:00~17:00</p>
+                    <p>LUNCH 12:30~13:30 (토/일/공휴일 휴무)</p>
+                </div>
+                <p class="address">서울특별시 성동구 왕십리로 66 (주)클리오 / 대표이사 : 한현옥 </p>
+                <p class="copy">Copyright ⓒ KimSoYeon.2022.All Rights Reserved.</p>
+                <div class="sns_btn_set">
+                    <p><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></p>
+                    <p><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></p>
+                    <p><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></p>
+                    <p><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></p>
+                </div>
+            </div>
+        </div>
+        <div class="boxH">
+            <div class="footer_bottom">
+                <ul>
+                    <li>FAMILY SITE <span>▶</span></li>
+                    <li><a href="#">㈜클리오</a></li>
+                    <li><a href="#">클럽클리오</a></li>
+                    <li><a href="#">구달</a></li>
+                    <li><a href="#">힐링버드</a></li>
+                    <li><a href="#">더마토리</a></li>
+                    <li><a href="#">트루알엑스</a></li>
+                </ul>
+            </div>
+        </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

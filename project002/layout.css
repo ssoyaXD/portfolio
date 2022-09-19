@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* 전체 설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+
+/* 레이아웃 설정 */
+/* 박스 A 가로설정 */
+.boxA {
+    display: flex;
+    height: 80px;
+}
+
+.box1 {
+    width: 20%;
+    height: 90px;
+}
+
+.box2 {
+    width: 100%;
+    height: 50px;
+}
+
+/* 박스 B 가로설정 */
+.boxB {
+    display: flex;
+    height: 1030px;
+}
+
+/* 박스 C 가로설정 */
+.boxC {
+    display: flex;
+    height: 1240px;
+}
+
+/* 박스 D 가로설정 */
+.boxD {
+    display: flex;
+    height: 1200px;
+}
+
+/* 박스 E 가로설정 */
+.boxE {
+    display: flex;
+    height: 1480px;
+}
+
+/* 박스 F 가로설정 */
+.boxF {
+    height: 1480px;
+    display: flex;
+
+}
+
+/* 박스 G 가로설정 */
+.boxG {
+    height: 400px;
+    display: flex;
+}
