@@ -1,0 +1,102 @@
+
+@charset "UTF_8";
+
+/* 구글 폰트 연결 */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Gowun+Batang&family=Permanent+Marker&family=Square+Peg&display=swap');
+
+/*
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Gowun Batang', serif;
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Square Peg', cursive;
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: 1c1c1c;
+    text-decoration: none;
+}
+
+body {
+    background-color: #e4d5d5;
+    font-family: 'Gowun Batang', serif;
+}
+
+.wrap {
+    width: 500px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+}
+
+.canvas {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(250, 245, 245);
+    border-radius: 10px;
+    box-shadow:  0 4px 6px rgba(50, 50, 93, 0.1), 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.controls {
+    margin-top: 80px;
+}
+
+.controls .controls_colors {
+    width: 500px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.controls_colors .controls_color {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.jsColor:nth-child(1) {
+    background-color: rgb(216, 33, 33);
+}
+
+.jsColor:nth-child(2) {
+    background-color: rgb(245, 152, 47);
+}
+
+.jsColor:nth-child(3) {
+    background-color: rgb(255, 231, 95);
+}
+
+.jsColor:nth-child(4) {
+    background-color: rgb(67, 196, 99);
+}
+
+.jsColor:nth-child(5) {
+    background-color: rgb(39, 69, 202);
+}
+
+.jsColor:nth-child(6) {
+    background-color: rgb(75, 58, 138);
+}
+
+.jsColor:nth-child(7) {
+    background-color: rgb(119, 48, 110);
+}
+
+.jsColor:nth-child(8) {
+    background-color: rgb(238, 238, 238);
+}
+
+.jsColor:nth-child(9) {
+    background-color: rgb(12, 12, 12);
+}

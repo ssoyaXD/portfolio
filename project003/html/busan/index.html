@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* mouse */
+        .mouse {
+            cursor: none;
+        }
+
+        .bg {
+            position: relative;
+            height: 100vh;
+            background-image: url(img/bg.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        .bg::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            /* background-color: rgba(52, 5, 70, 0.9); */
+            z-index: -1;
+        }
+
+        /* info */
+        .info {
+            color: #fff;
+            font-family: "NEXONLv1Gothic";
+            padding: 20px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .info.right {
+            left: auto;
+            right: 0px;
+            top: 0px;
+        }
+
+        .info h1 {
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .info h1 a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .info p {
+            font-weight: 300;
+            font-size: 16px;
+        }
+
+        .info li {
+            list-style: none;
+            display: inline;
+        }
+
+        .info li a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px dashed #fff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            line-height: 21px;
+            text-align: center;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .info li.active a {
+            background: #fff;
+            color: #000;
+        }
+
+        .info.left {
+            top: auto;
+            right: 0px;
+            bottom: 0px;
+            width: 200px;
+        }
+
+        .info.left li {
+            display: block;
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* mouseCont */
+        .mouseCont {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'NEXONLv1Gothic';
+        }
+
+        .mouseCont p {
+            font-size: 2vw;
+            line-height: 2;
+            font-weight: 300;
+        }
+
+        .mouseCont p:last-child {
+            font-size: 3vw;
+            font-weight: normal;
+            font-weight: 400;
+        }
+
+        .mouseCont em {
+            font-style: normal;
+            border-bottom: 0.2vw dashed orange;
+            color: orange
+        }
+
+        .cursor {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            overflow: hidden;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        .box-item {
+            position: absolute;
+            left: -20%;
+            top: -30%;
+            width: 120%;
+            padding: 20%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            z-index: 1;
+            box-sizing: border-box;
+            transform: rotate(0deg);
+            display: flex;
+        }
+
+        .box-item .item {
+            width: 2px;
+            height: 2px;
+            margin: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            transition: all 0.6s;
+            animation: ani 5s alternate infinite;
+            opacity: 0;
+        }
+
+
+
+        @keyframes ani {
+            0% {
+                background-color: rgba(255, 255, 255, 1);
+                opacity: 1;
+            }
+
+            50% {
+                background-color: rgba(255, 255, 255, 1);
+                opacity: 1;
+            }
+
+            100% {
+                background-color: rgba(255, 255, 255, 0.5);
+                opacity: 0.4;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="mouse bg">
+
+    <!-- main -->
+    <main>
+        <div class="cursor"></div>
+
+        <article class="mouseCont">
+        </article>
+        <div class="box-wrap">
+            <div class="box-item two">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // $(window).mousemove(function (e) {
+
+            //     let x = e.pageX,
+            //         y = e.pageY;
+            //     $('.pageX').text(x);
+            //     $('.pageY').text(y);
+
+            //     let standx = $(window).width() / 2 - x,
+            //         maxX = Math.max(-50, Math.min(50, standx));
+
+            //     $('.box-item .item').mouseenter(function () {
+
+            //         $(this).css({
+            //             'transform': ' rotate(' + -maxX + 'deg)'
+            //         })
+            //     })
+            // });
+
+            // $('.box-item .item').mouseleave(function () {
+
+            //     $(this).css({
+            //         'transform': ' rotate(' + 0 + 'deg)'
+            //     })
+            // });
+
+        })
+        $(window).mousemove(function (e) {
+            $('.item').css({
+                'opacity': 1
+            });
+            $('.cursor').css({
+                'opacity': 1
+            });
+
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+
+            $(".item").each(function (index, item) {
+                const itemX = $(this).offset().left + 20;
+                const itemY = $(this).offset().top + 20;
+                const diffX = mouseX - itemX;
+                const diffY = mouseY - itemY;
+                const radians = Math.atan2(diffY, diffX);
+                const angle = radians * 180 / Math.PI;
+
+                // $(this).css({"transform" : "rotate("+ angle +"deg)"})
+            });
+
+            //커서
+            gsap.to(".cursor", {
+                duration: 0.1,
+                x: e.clientX - 10,
+                y: e.clientY - 10
+            });
+
+            gsap.to(".item:nth-child(1)", {
+                duration: 0,
+                x: e.clientX,
+                y: e.clientY
+            });
+            gsap.to(".item:nth-child(2)", {
+                duration: 0.1,
+                x: e.clientX,
+                y: e.clientY - 10
+            });
+            gsap.to(".item:nth-child(3)", {
+                duration: 0.2,
+                x: e.clientX - 50,
+                y: e.clientY - 100
+            });
+            gsap.to(".item:nth-child(4)", {
+                duration: 0,
+                x: e.clientX,
+                y: e.clientY
+            });
+            gsap.to(".item:nth-child(5)", {
+                duration: 0.1,
+                x: e.clientX + 10,
+                y: e.clientY - 10
+            });
+            gsap.to(".item:nth-child(6)", {
+                duration: 0.2,
+                x: e.clientX - 50,
+                y: e.clientY - 100
+            });
+            gsap.to(".item:nth-child(7)", {
+                duration: 0,
+                x: e.clientX + 30,
+                y: e.clientY
+            });
+            gsap.to(".item:nth-child(8)", {
+                duration: 0.1,
+                x: e.clientX - 10,
+                y: e.clientY - 10
+            });
+            gsap.to(".item:nth-child(9)", {
+                duration: 0.8,
+                x: e.clientX - 120,
+                y: e.clientY+10
+            });
+            gsap.to(".item:nth-child(10)", {
+                duration: 0,
+                x: e.clientX,
+                y: e.clientY
+            });
+            gsap.to(".item:nth-child(11)", {
+                duration: 0.1,
+                x: e.clientX,
+                y: e.clientY - 40
+            });
+            gsap.to(".item:nth-child(12)", {
+                duration: 0.2,
+                x: e.clientX - 50,
+                y: e.clientY - 100
+            });
+            gsap.to(".item:nth-child(13)", {
+                duration: 0,
+                x: e.clientX,
+                y: e.clientY
+            });
+            gsap.to(".item:nth-child(14)", {
+                duration: 0.1,
+                x: e.clientX,
+                y: e.clientY - 50
+            });
+            gsap.to(".item:nth-child(15)", {
+                duration: 0.2,
+                x: e.clientX - 50,
+                y: e.clientY - 100
+            });
+            gsap.to(".item:nth-child(16)", {
+                duration: 0,
+                x: e.clientX + 90,
+                y: e.clientY - 50
+            });
+            gsap.to(".item:nth-child(17)", {
+                duration: 0.8,
+                x: e.clientX + 10,
+                y: e.clientY - 10
+            });
+            gsap.to(".item:nth-child(18)", {
+                duration: 0.4,
+                x: e.clientX - 50,
+                y: e.clientY + 100
+            });
+            gsap.to(".item:nth-child(19)", {
+                duration: 0.1,
+                x: e.clientX,
+                y: e.clientY - 10
+            });
+            gsap.to(".item:nth-child(20)", {
+                duration: 0.2,
+                x: e.clientX - 50,
+                y: e.clientY - 10
+            });
+            gsap.to(".item:nth-child(21)", {
+                duration: 0.8,
+                x: e.clientX,
+                y: e.clientY
+            });
+            gsap.to(".item:nth-child(22)", {
+                duration: 0.1,
+                x: e.clientX - 90,
+                y: e.clientY - 10
+            });
+            gsap.to(".item:nth-child(23)", {
+                duration: 0.2,
+                x: e.clientX - 50,
+                y: e.clientY - 100
+            });
+            gsap.to(".item:nth-child(24)", {
+                duration: 0,
+                x: e.clientX,
+                y: e.clientY
+            });
+            gsap.to(".item:nth-child(25)", {
+                duration: 0.1,
+                x: e.clientX + 10,
+                y: e.clientY - 10
+            });
+            gsap.to(".item:nth-child(26)", {
+                duration: 0.2,
+                x: e.clientX - 50,
+                y: e.clientY - 100
+            });
+            gsap.to(".item:nth-child(27)", {
+                duration: 0.4,
+                x: e.clientX + 30,
+                y: e.clientY
+            });
+            gsap.to(".item:nth-child(28)", {
+                duration: 0.1,
+                x: e.clientX - 10,
+                y: e.clientY - 10
+            });
+            gsap.to(".item:nth-child(29)", {
+                duration: 0.2,
+                x: e.clientX - 120,
+                y: e.clientY
+            });
+            gsap.to(".item:nth-child(30)", {
+                duration: 0.4,
+                x: e.clientX,
+                y: e.clientY
+            });
+            gsap.to(".item:nth-child(31)", {
+                duration: 0.8,
+                x: e.clientX,
+                y: e.clientY - 40
+            });
+            gsap.to(".item:nth-child(32)", {
+                duration: 0.2,
+                x: e.clientX - 50,
+                y: e.clientY - 100
+            });
+            gsap.to(".item:nth-child(33)", {
+                duration: 0,
+                x: e.clientX + 50,
+                y: e.clientY
+            });
+            gsap.to(".item:nth-child(34)", {
+                duration: 0.1,
+                x: e.clientX,
+                y: e.clientY - 50
+            });
+            gsap.to(".item:nth-child(35)", {
+                duration: 0.2,
+                x: e.clientX - 50,
+                y: e.clientY - 100
+            });
+            gsap.to(".item:nth-child(36)", {
+                duration: 0,
+                x: e.clientX + 90,
+                y: e.clientY - 50
+            });
+            gsap.to(".item:nth-child(37)", {
+                duration: 0.1,
+                x: e.clientX + 10,
+                y: e.clientY - 10
+            });
+            gsap.to(".item:nth-child(38)", {
+                duration: 0.2,
+                x: e.clientX - 50,
+                y: e.clientY + 100
+            });
+            gsap.to(".item:nth-child(39)", {
+                duration: 0.1,
+                x: e.clientX,
+                y: e.clientY - 10
+            });
+            gsap.to(".item:nth-child(40)", {
+                duration: 0.2,
+                x: e.clientX - 10,
+                y: e.clientY - 10
+            });
+        });
+    </script>
+</body>
+
+</html>

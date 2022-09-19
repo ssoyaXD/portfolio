@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salty</title>
+    <!-- 제이쿼리연결 -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Hi Melody', cursive;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            color: #1c1c1c;
+            text-decoration: none;
+        }
+
+        .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(117, 103, 111);
+        }
+
+        .memo_img {
+            background-image: url(img/bg.png);
+            background-size: cover;
+            width: 900px;
+            height: 700px;
+            background-color: bisque;
+            position: relative;
+        }
+
+        .memo_img .img_set {
+            width: 100%;
+            height: 100%;
+        }
+
+        .img_set .dark {
+            width: 100%;
+            height: 100%;
+            background-image: url(img/dark.png);
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            z-index: 10;
+            transition: all 0.5s;
+        }
+
+        .img_set .computer {
+            width: 100%;
+            height: 100%;
+            background-image: url(img/computer.png);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            transition: all 0.5s;
+        }
+
+        .img_set .computer_bg_01 {
+            width: 100%;
+            height: 100%;
+            background-image: url(img/computer_bg_002.png);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            transition: all 0.5s;
+        }
+
+        .img_set .computer_bg_02 {
+            width: 100%;
+            height: 100%;
+            background-image: url(img/computer_bg_001.png);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            transition: all 0.5s;
+        }
+
+        .img_set .bg_oj {
+            width: 100%;
+            height: 100%;
+            background-image: url(img/bg_oj.png);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            transition: all 0.5s;
+        }
+
+        .memo_txt {
+            width: 200px;
+            height: 250px;
+            background-color: rgb(240, 216, 149);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            opacity: 0.8;
+            z-index: 50;
+            transition: all 0.5s;
+        }
+
+        ul {
+            text-align: center;
+            font-size: 24pt;
+            margin-top: 50px;
+        }
+
+        ul li {
+            height: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 16pt;
+        }
+
+        ul li.on {
+            text-decoration: line-through;
+        }
+
+        ul li a {
+            color: rgb(54, 48, 48);
+            transition: all 0.5s;
+            /* text-decoration:line-through; */
+        }
+
+        ul li a:hover {
+            font-size: 18pt;
+            font-weight: bold;
+            color: rgb(141, 26, 26);
+        }
+
+        h1 {
+            width: 100px;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            font-size: 36pt;
+            margin-left: -50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="memo_img">
+            <div class="memo_txt">
+                <h1>LIST</h1>
+                <ul>
+                    <li><a href="#">□ 책상 정리하기</a></li>
+                    <li><a href="#">□ 사진 지우기</a></li>
+                    <li><a href="#">□ 산책</a></li>
+                </ul>
+            </div>
+            <div class="img_set">
+                <div class="dark"></div>
+                <div class="computer"></div>
+                <div class="computer_bg_01"></div>
+                <div class="computer_bg_02"></div>
+                <div class="bg_oj"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            let ck001 = false;
+            let ck002 = false;
+            let ck003 = false;
+
+            $('.memo_txt ul li:nth-child(1)').click(function () {
+                // let num = $(this).index();
+
+                if (ck001 == false) {
+                    $(this).addClass('on');
+                    $('.bg_oj').css({
+                        'opacity': 0
+                    });
+                } else {
+                    $(this).removeClass('on');
+                    $('.bg_oj').css({
+                        'opacity': 1
+                    });
+                }
+
+                ck001 = !ck001;
+            });
+
+            $('.memo_txt ul li:nth-child(2)').click(function () {
+                // let num = $(this).index();
+
+                if (ck002 == false) {
+                    $(this).addClass('on');
+                    $('.computer_bg_02').css({
+                        'opacity': 0
+                    });
+                } else {
+                    $(this).removeClass('on');
+                    $('.computer_bg_02').css({
+                        'opacity': 1
+                    });
+                }
+
+                ck002 = !ck002;
+            });
+
+
+            $('.memo_txt ul li:nth-child(3)').click(function () {
+                // let num = $(this).index();
+
+                if (ck003 == false) {
+                    $(this).addClass('on');
+                    $('.dark').css({
+                        'opacity': 0.7
+                    });
+                } else {
+                    $(this).removeClass('on');
+                    $('.dark').css({
+                        'opacity': 0
+                    });
+                }
+
+                ck003 = !ck003;
+            });
+
+        })
+    </script>
+
+</body>
+
+</html>

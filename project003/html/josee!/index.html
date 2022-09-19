@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>josee</title>
+    <style>
+        /* 구글 폰트 연결 */
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Gowun+Batang&family=Permanent+Marker&family=Square+Peg&display=swap');
+
+        /*
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Gowun Batang', serif;
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Square Peg', cursive;
+ */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* mouse */
+        .mouse {
+            background: #222;
+            color: #fff;
+            font-weight: 400;
+        }
+
+        .bg {
+            position: relative;
+            height: 100vh;
+            background-image: url(sea.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            font-family: 'Gowun Batang', serif;
+        }
+
+        .bg::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(141, 133, 168, 0.7);
+            z-index: -1;
+        }
+
+        /* mouseCont */
+        .mouseCont {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .moveImage {
+            position: relative;
+            cursor: none;
+        }
+
+        .moveImage .mImg {
+            width: 50vw;
+            height: 60vh;
+            background: #ccc;
+            position: relative;
+            overflow: hidden;
+            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+        }
+
+        .moveImage:hover .mImg {
+            transform: scale(1.025);
+        }
+
+        .moveImage .mImg img {
+            background-image: url(sea.gif);
+            background-size: cover;
+            position: absolute;
+            left: -5%;
+            top: -5%;
+            width: 110%;
+            height: 110%;
+            object-fit: cover;
+            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+        }
+
+        .moveImage:hover .mImg img {
+            filter: grayscale(0%)
+        }
+
+        .moveImage .mText {
+            width: 800px;
+            height: 50px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5vw;
+            line-height: 1.6;
+            white-space: nowrap;
+            background-color: firebrick;
+            overflow: hidden;
+        }
+
+        .cursor {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .mText p {
+            width: 400px;
+            height: 50px;
+            /* transform: scale(0); */
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            background-color: aquamarine;
+            margin-left: -200px;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mText p.on {
+            font-size: 2.0vw;
+            top: 0;
+        }
+    </style>
+
+</head>
+
+<body class="mouse bg">
+
+    <!-- main -->
+    <main>
+        <div class="cursor"></div>
+
+        <article class="mouseCont">
+            <div class="moveImage">
+                <div class="mImg">
+                    <img src="sea.jpg" alt="">
+                </div>
+                <!-- <div class="mText">
+                    <h1>00</h1>
+                    <p class="on">너는 달을 볼 때 눈이 커졌고</p>
+                    <p>나는 너의 눈에 비친 것을 보네</p>
+                    <p> 네가 사랑하는 것이 나와 같아</p>
+                    <p>나는 너를 보네</p>
+                    <p>꽃이 피어가는 줄도 모른 채</p>
+                    <p>고운 너의 그림자를 안고서</p>
+                    <p>마지막처럼 입맞춤을 추곤</p>
+                    <p>우리 늙지 말자</p>
+                    <p>다 가져가 줘요 아쉬움 없도록</p>
+                    <p>나의 사랑은 그리 길지 않으니</p>
+                    <p>이 순간, 나의 모든걸 줄게</p>
+                    <p>남은 나의 시간도</p>
+                    <p>아, 아</p>
+                    <p>다시 너를 안게 된다면</p>
+                    <p>그땐 나의 빛을 밝혀서</p>
+                    <p>너의 모든 것들을 덮어줄게</p>
+                    <p>잘자, 나의 우는 사랑</p>
+                </div> -->
+            </div>
+        </article>
+    </main>
+
+    <!-- script -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script>
+        
+
+
+        // p출력
+        // let ti = 0;
+        //     setInterval(function () {
+
+        //         if (ti == 11) {
+        //             $('.mText p:nth-child(1)').addClass('on');
+        //         } else if (ti == 16) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(2)').addClass('on');
+        //         } else if (ti == 23) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(3)').addClass('on');
+        //         } else if (ti == 29) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(4)').addClass('on');
+        //         } else if (ti == 35) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(5)').addClass('on');
+        //         } else if (ti == 41) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(6)').addClass('on');
+        //         } else if (ti == 48) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(7)').addClass('on');
+        //         } else if (ti == 54) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(8)').addClass('on');
+        //         } else if (ti == 59) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(9)').addClass('on');
+        //         } else if (ti == 66) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(10)').addClass('on');
+        //         } else if (ti == 71) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(11)').addClass('on');
+        //         } else if (ti == 80) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(12)').addClass('on');
+        //         } else if (ti == 85) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(13)').addClass('on');
+        //         } else if (ti == 90) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(14)').addClass('on');
+        //         } else if (ti == 96) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(15)').addClass('on');
+        //         } else if (ti == 102) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(16)').addClass('on');
+        //         } else if (ti == 108) {
+        //             $('.mText p').removeClass('on');
+        //             $('.mText p:nth-child(17)').addClass('on');
+        //         }
+
+        //         ti++;
+        //         console.log(ti)
+        //         $('h1').text(ti);
+
+        //     }, 1000);
+
+
+        $(".moveImage").mousemove(function (e) {
+            gsap.to(".cursor", {
+                duration: .2,
+                left: e.pageX - 10,
+                top: e.pageY - 10
+            })
+
+            let pageX = e.pageX;
+            let pageY = e.pageY;
+
+            let standardX = $(window).width() / 2 - pageX;
+            let standardY = $(window).height() / 2 - pageY;
+
+            $(".mImg img").attr({
+                "style": "transform : translate(" + standardX / 20 + "px," + standardY / 20 + "px)"
+            });
+
+
+        })
+    </script>
+</body>
+
+</html>
